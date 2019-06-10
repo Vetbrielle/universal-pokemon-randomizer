@@ -338,6 +338,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private int pokedexCount;
     private String[] pokeNames;
     private ItemList allowedItems, nonBadItems;
+    private int evolutionsPerPokemon = Gen3Constants.gen3EvolutionsPerPokemon;
 
     @Override
     public boolean detectRom(byte[] rom) {
@@ -425,6 +426,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         if (romEntry.romCode.equals("BPRE") && romEntry.version == 0) {
             basicBPRE10HackSupport();
         }
+
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
 
         loadPokemonNames();
         loadPokedex();
@@ -752,7 +755,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             }
         }
         numRealPokemon = pokemonList.size() - 1;
-
     }
 
     private void loadPokemonStats() {
@@ -2246,8 +2248,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
-            int evoOffset = baseOffset + (idx) * 0x28;
-            for (int j = 0; j < 5; j++) {
+            int evoOffset = baseOffset + (idx * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize);
+            for (int j = 0; j < evolutionsPerPokemon; j++) {
                 int method = readWord(evoOffset + j * 8);
                 int evolvingTo = readWord(evoOffset + j * 8 + 4);
                 if (method >= 1 && method <= Gen3Constants.evolutionMethodCount && evolvingTo >= 1
@@ -2277,6 +2279,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             int idx = pokedexToInternal[pk.number];
             int evoOffset = baseOffset + (idx) * 0x28;
             int evosWritten = 0;
+
             for (Evolution evo : pk.evolutionsFrom) {
                 writeWord(evoOffset, evo.type.toIndex(3));
                 writeWord(evoOffset + 2, evo.extraInfo);
@@ -2284,11 +2287,11 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                 writeWord(evoOffset + 6, 0);
                 evoOffset += 8;
                 evosWritten++;
-                if (evosWritten == 5) {
+                if (evosWritten == evolutionsPerPokemon) {
                     break;
                 }
             }
-            while (evosWritten < 5) {
+            while (evosWritten < evolutionsPerPokemon) {
                 writeWord(evoOffset, 0);
                 writeWord(evoOffset + 2, 0);
                 writeWord(evoOffset + 4, 0);

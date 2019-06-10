@@ -30,10 +30,21 @@ public enum EvolutionType {
     LEVEL_ICY_ROCK(-1, -1, -1, 26, 27),
     TRADE_SPECIAL(-1, -1, -1, -1, 7),
     NONE(-1, -1, -1, -1, -1);
+    //    GAIA_FAIRY_MOVE(-1,-1,16,-1,-1),
+    //    GAIA_LEVEL_RAIN(-1,-1,17,-1,-1),
+    //    GAIA_LEVEL_DARK_PKMN(-1,-1,18,-1,-1),
+    //    GAIA_LEVEL_MALE(-1,-1,19,-1,-1),
+    //    GAIA_LEVEL_FEMALE(-1,-1,20,-1,-1),
+    //    GAIA_LEARN_MOVE(-1,-1,21,-1,-1),
+    //    GAIA_PKMN_PARTY(-1,-1,22,-1,-1),
+    //    GAIA_LEVEL_MAP(-1,-1,23,-1,-1),
+    //    GAIA_ITEM_MALE(-1,-1,24,-1,-1),
+    //    GAIA_ITEM_FEMALE(-1,-1,25,-1,-1),
+    //    GAIA_MEGA_EVOLVE(-1,-1,254,-1,-1);
     /* @formatter:on */
 
     private int[] indexNumbers;
-    private static EvolutionType[][] reverseIndexes = new EvolutionType[5][30];
+    private static EvolutionType[][] reverseIndexes = new EvolutionType[5][EvolutionType.values().length];
 
     static {
         for (EvolutionType et : EvolutionType.values()) {
