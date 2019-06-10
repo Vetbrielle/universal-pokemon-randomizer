@@ -19,7 +19,7 @@ public enum ExpCurve {
         case 5:
             return SLOW;
         }
-        return null;
+        return MEDIUM_FAST;
     }
 
     public byte toByte() {

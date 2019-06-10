@@ -137,7 +137,7 @@ public class Gen3Constants {
 
     public static final int sunStoneIndex = 93, moonStoneIndex = 94, waterStoneIndex = 97;
 
-    public static final int highestAbilityIndex = 77;
+    public static final int highestAbilityIndex = 255;
 
     public static final int frlgMapLabelsStart = 0x58;
 

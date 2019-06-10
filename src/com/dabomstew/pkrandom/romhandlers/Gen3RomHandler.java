@@ -1211,6 +1211,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         List<EncounterSet> encounterAreas = new ArrayList<EncounterSet>();
         Set<Integer> seenOffsets = new TreeSet<Integer>();
         int offs = startOffs;
+
         while (true) {
             // Read pointers
             int bank = rom[offs] & 0xFF;
@@ -1218,7 +1219,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             if (bank == 0xFF && map == 0xFF) {
                 break;
             }
-
             String mapName = mapNames[bank][map];
 
             int grassPokes = readPointer(offs + 4);
@@ -1283,14 +1283,24 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         for (int i = 0; i < numOfEntries; i++) {
             // min, max, species, species
             Encounter enc = new Encounter();
-            enc.level = rom[dataOffset + i * 4];
-            enc.maxLevel = rom[dataOffset + i * 4 + 1];
+            try {
+                enc.level = (byte) rom[dataOffset + i * 4];
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                throw ex;
+            }
+            try {
+                enc.maxLevel = (byte) rom[dataOffset + i * 4 + 1];
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                throw ex;
+            }
             try {
                 enc.pokemon = pokesInternal[readWord(dataOffset + i * 4 + 2)];
             } catch (ArrayIndexOutOfBoundsException ex) {
                 throw ex;
             }
-            thisSet.encounters.add(enc);
+            if (enc.toString() != "ERROR") {
+                thisSet.encounters.add(enc);
+            }
         }
         return thisSet;
     }
@@ -1521,9 +1531,11 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         int dataOffset = readPointer(offset + 4);
         // Write the entries
         for (int i = 0; i < numOfEntries; i++) {
-            Encounter enc = encounters.encounters.get(i);
-            // min, max, species, species
-            writeWord(dataOffset + i * 4 + 2, pokedexToInternal[enc.pokemon.number]);
+            if (encounters.encounters.size() > 0) {
+                Encounter enc = encounters.encounters.get(i);
+                // min, max, species, species
+                writeWord(dataOffset + i * 4 + 2, pokedexToInternal[enc.pokemon.number]);
+            }
         }
     }
 
