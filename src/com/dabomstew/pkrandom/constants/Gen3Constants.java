@@ -13,6 +13,7 @@ public class Gen3Constants {
     public static final int RomType_Sapp = 1;
     public static final int RomType_Em = 2;
     public static final int RomType_FRLG = 3;
+    public static final int RomType_Gaia = 4;
 
     public static final int size8M = 0x800000, size16M = 0x1000000, size32M = 0x2000000;
 
@@ -61,7 +62,7 @@ public class Gen3Constants {
     public static final byte freeSpaceByte = (byte) 0xFF;
 
     public static final int rseStarter2Offset = 2, rseStarter3Offset = 4, frlgStarter2Offset = 515,
-            frlgStarter3Offset = 461, frlgStarterRepeatOffset = 5;
+            frlgStarter3Offset = 461, frlgStarterRepeatOffset = 5, gaiaStarter2Offset = 10, gaiaStarter3Offset = 20;
 
     public static final int frlgBaseStarter1 = 1, frlgBaseStarter2 = 4, frlgBaseStarter3 = 7;
 
