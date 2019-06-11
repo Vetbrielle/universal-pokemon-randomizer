@@ -592,7 +592,6 @@ public class Randomizer {
                                     log.print(", ");
                                 }
                                 itemCount++;
-                                System.out.println("Pokémon #" + pkmn.number + " has rare held item #" + pkmn.rareHeldItem);
                                 log.print(itemNames[pkmn.rareHeldItem] + " (rare)");
                             }
                             if (pkmn.darkGrassHeldItem > 0) {

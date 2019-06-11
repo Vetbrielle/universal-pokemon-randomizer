@@ -289,10 +289,8 @@ public class Gen3Constants {
         // Unknown blank items
         allowedItemsGaia.banRange(0x178,322);
 
-        // HMs
-        allowedItemsGaia.banRange(339, 8);
-        // TMs
-        allowedItemsGaia.tmRange(289, 50);
+        // TMs and HMs
+        allowedItemsGaia.banRange(289, 58);
 
         // non-bad items
         // ban Pokémon-specific hold items, berries, Mega Stones and mail
