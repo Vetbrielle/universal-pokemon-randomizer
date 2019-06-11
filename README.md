@@ -1,3 +1,6 @@
+# Release
+https://github.com/sphericalice/universal-pokemon-randomizer/releases/
+
 # Universal Pokémon Randomizer [Pokémon Gaia Fork]
 Universal Pokémon Randomizer by Dabomstew
 
