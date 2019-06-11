@@ -814,6 +814,17 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             }
         }
 
+        // Purge excluded moves
+        if (romEntry.arrayEntries.containsKey("ExcludedMoves")) {
+            int[] excludedMoves = romEntry.arrayEntries.get("ExcludedMoves");
+            for (int i = 1; i <= moveCount; i++) {
+                for (int j = 0; j < excludedMoves.length; j++) {
+                    if (moves[i].number == excludedMoves[j]) {
+                        moves[i].number = 0;
+                    }
+                }
+            }
+        }
     }
 
     private void saveMoves() {
@@ -1895,7 +1906,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     @Override
     public boolean hasMoveTutors() {
-        return (romEntry.romType == Gen3Constants.RomType_Em || romEntry.romType == Gen3Constants.RomType_FRLG || romEntry.romType == Gen3Constants.RomType_Gaia);
+        return (romEntry.romType == Gen3Constants.RomType_Em || romEntry.romType == Gen3Constants.RomType_FRLG);
     }
 
     @Override

@@ -146,14 +146,14 @@ public class Gen3Constants {
 
     public static final int frlgMapLabelsStart = 0x58;
 
-    public static final List<Integer> rsRequiredFieldTMs = Arrays.asList(new Integer[] { 1, 2, 6, 7, 11, 18, 22, 23,
-            26, 30, 37, 48 });
+    public static final List<Integer> rsRequiredFieldTMs = Arrays.asList(1, 2, 6, 7, 11, 18, 22, 23,
+            26, 30, 37, 48 );
 
-    public static final List<Integer> eRequiredFieldTMs = Arrays.asList(new Integer[] { 2, 6, 7, 11, 18, 22, 23, 30,
-            37, 48 });
+    public static final List<Integer> eRequiredFieldTMs = Arrays.asList(2, 6, 7, 11, 18, 22, 23, 30,
+            37, 48 );
 
-    public static final List<Integer> frlgRequiredFieldTMs = Arrays.asList(new Integer[] { 1, 2, 7, 8, 9, 11, 12, 14,
-            17, 18, 21, 22, 25, 32, 36, 37, 40, 41, 44, 46, 47, 48, 49, 50 });
+    public static final List<Integer> frlgRequiredFieldTMs = Arrays.asList(1, 2, 7, 8, 9, 11, 12, 14,
+            17, 18, 21, 22, 25, 32, 36, 37, 40, 41, 44, 46, 47, 48, 49, 50 );
 
     public static final List<Integer> rseFieldMoves = Arrays.asList(15, 19, 57, 70, 148, 91, 100, 127, 249, 230, 291,
             290);

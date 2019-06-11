@@ -1992,6 +1992,10 @@ public abstract class AbstractRomHandler implements RomHandler {
                     || mv.power < GlobalConstants.MIN_DAMAGING_MOVE_POWER) {
                 unusableDamagingMoves.add(mv);
             }
+
+            if (mv.number == 0) {
+                unusableMoves.add(mv);
+            }
         }
 
         usableMoves.removeAll(unusableMoves);
