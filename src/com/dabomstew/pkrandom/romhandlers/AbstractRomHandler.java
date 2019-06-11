@@ -421,6 +421,15 @@ public abstract class AbstractRomHandler implements RomHandler {
     }
 
     @Override
+    public boolean hasExcludedAbilities() {
+        return false;
+    }
+
+    @Override
+    public List<Integer> getExcludedAbilities() {
+        return null;
+    }
+    @Override
     public void randomizeAbilities(boolean evolutionSanity, boolean allowWonderGuard, boolean banTrappingAbilities,
             boolean banNegativeAbilities) {
         // Abilities don't exist in some games...
@@ -442,6 +451,10 @@ public abstract class AbstractRomHandler implements RomHandler {
 
         if (banNegativeAbilities) {
             bannedAbilities.addAll(GlobalConstants.negativeAbilities);
+        }
+
+        if (this.hasExcludedAbilities()) {
+            bannedAbilities.addAll(this.getExcludedAbilities());
         }
 
         final int maxAbility = this.highestAbilityIndex();

@@ -134,7 +134,8 @@ public interface RomHandler {
     public int abilitiesPerPokemon();
 
     public int highestAbilityIndex();
-
+    public boolean hasExcludedAbilities();
+    public List<Integer> getExcludedAbilities();
     public String abilityName(int number);
 
     public void randomizeAbilities(boolean evolutionSanity, boolean allowWonderGuard, boolean banTrappingAbilities,

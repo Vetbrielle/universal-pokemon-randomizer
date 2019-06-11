@@ -2509,15 +2509,35 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     }
 
     @Override
+    public boolean hasExcludedAbilities() {
+        return romEntry.arrayEntries.containsKey("ExcludedAbilities");
+    }
+
+    @Override
+    public List<Integer> getExcludedAbilities() {
+        int[] ExcludedAbilities = romEntry.arrayEntries.get("ExcludedAbilities");
+        List<Integer> excludedAbilitiesList = new ArrayList<>();
+
+        for (int i = 0; i < ExcludedAbilities.length; i++) {
+            excludedAbilitiesList.add(ExcludedAbilities[i]);
+        }
+
+        return excludedAbilitiesList;
+    }
+
+    @Override
     public int highestAbilityIndex() {
-        return Gen3Constants.highestAbilityIndex;
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) {
+            return Gen3Constants.gaiaHighestAbilityIndex;
+        }
+        return Gen3Constants.gen3HighestAbilityIndex;
     }
 
     private void loadAbilityNames() {
         int nameoffs = romEntry.getValue("AbilityNames");
         int namelen = romEntry.getValue("AbilityNameLength");
-        abilityNames = new String[Gen3Constants.highestAbilityIndex + 1];
-        for (int i = 0; i <= Gen3Constants.highestAbilityIndex; i++) {
+        abilityNames = new String[highestAbilityIndex() + 1];
+        for (int i = 0; i <= highestAbilityIndex(); i++) {
             abilityNames[i] = readFixedLengthString(nameoffs + namelen * i, namelen);
         }
     }
