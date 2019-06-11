@@ -185,6 +185,7 @@ public class Gen3Constants {
         table[0x0F] = Type.ICE;
         table[0x10] = Type.DRAGON;
         table[0x11] = Type.DARK;
+        table[0x17] = Type.FAIRY;
         return table;
     }
 

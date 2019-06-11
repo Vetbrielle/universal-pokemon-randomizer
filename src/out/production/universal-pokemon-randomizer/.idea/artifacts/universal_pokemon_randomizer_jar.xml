@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="universal-pokemon-randomizer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer_jar</output-path>
+    <root id="archive" name="universal-pokemon-randomizer_jar.jar">
+      <element id="module-output" name="universal-pokemon-randomizer" />
+    </root>
+  </artifact>
+</component>
