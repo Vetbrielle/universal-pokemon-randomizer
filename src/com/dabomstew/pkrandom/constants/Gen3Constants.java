@@ -18,6 +18,7 @@ public class Gen3Constants {
     public static final int size8M = 0x800000, size16M = 0x1000000, size32M = 0x2000000;
 
     public static final String unofficialEmeraldROMName = "YJencrypted";
+    public static final String gaiaROMName = "POKEMON GAIA";
 
     public static final int romNameOffset = 0xA0, romCodeOffset = 0xAC, romVersionOffset = 0xBC,
             headerChecksumOffset = 0xBD;

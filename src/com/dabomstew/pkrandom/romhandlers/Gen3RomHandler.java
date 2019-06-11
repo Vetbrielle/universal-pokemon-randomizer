@@ -358,6 +358,15 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             rom[Gen3Constants.romCodeOffset + 3] = 'T';
             rom[Gen3Constants.headerChecksumOffset] = 0x66;
         }
+        // Special case for Gaia
+        if (romName(rom, Gen3Constants.gaiaROMName)) {
+            // give it a rom code so it can be detected
+            rom[Gen3Constants.romCodeOffset] = 'G';
+            rom[Gen3Constants.romCodeOffset + 1] = 'A';
+            rom[Gen3Constants.romCodeOffset + 2] = 'I';
+            rom[Gen3Constants.romCodeOffset + 3] = 'A';
+            rom[Gen3Constants.headerChecksumOffset] = 0x68;
+        }
         // Wild Pokemon header
         if (find(rom, Gen3Constants.wildPokemonPointerPrefix) == -1) {
             return false;
