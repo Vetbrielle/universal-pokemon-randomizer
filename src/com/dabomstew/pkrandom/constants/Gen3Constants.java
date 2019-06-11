@@ -227,6 +227,8 @@ public class Gen3Constants {
             return 0x08;
         case DARK:
             return 0x11;
+        case FAIRY:
+            return 0x17;
         default:
             return 0; // normal by default
         }
