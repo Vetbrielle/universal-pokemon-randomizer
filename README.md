@@ -1,10 +1,19 @@
-Universal Pokemon Randomizer
+# Release
+https://github.com/sphericalice/universal-pokemon-randomizer/releases/
 
-By Dabomstew
+# Universal Pokémon Randomizer [Pokémon Gaia Fork]
+Universal Pokémon Randomizer by Dabomstew
 
-Homepage: http://pokehacks.dabomstew.com/randomizer/
+Pokémon Gaia Fork by Spherical Ice
 
-**Notice: New binary releases of the randomizer have been indefinitely suspended since 2016. This repository remains available to distribute source code and facilitiate forks.**
+Universal Pokémon Randomizer Homepage: http://pokehacks.dabomstew.com/randomizer/
+
+Pokémon Gaia Version: https://www.pokecommunity.com/showthread.php?t=326118
+
+
+**Notice: This randomizer currently only supports the (unreleased) Pokémon Gaia Version v4.0 build.**
+
+The remainder of this README.md is copied from Dabomstew's original.
 
 # For Program Users
 If you're looking to actually *use* the randomizer as opposed to looking at the 
