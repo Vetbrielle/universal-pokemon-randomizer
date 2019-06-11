@@ -456,8 +456,13 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         loadAbilityNames();
         loadItemNames();
 
-        allowedItems = Gen3Constants.allowedItems.copy();
-        nonBadItems = Gen3Constants.nonBadItems.copy();
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) {
+            allowedItems = Gen3Constants.allowedItemsGaia.copy();
+            nonBadItems = Gen3Constants.nonBadItemsGaia.copy();
+        } else {
+            allowedItems = Gen3Constants.allowedItems.copy();
+            nonBadItems = Gen3Constants.nonBadItems.copy();
+        }
     }
 
     private int findPointerPrefixAndSuffix(String prefix, String suffix) {
@@ -2839,7 +2844,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         for (int offset : itemOffs) {
             int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isTM(itemHere)) {
+            if (allowedItems.isTM(itemHere)) {
                 int thisTM = itemHere - Gen3Constants.tmItemOffset + 1;
                 // hack for repeat TMs
                 if (fieldTMs.contains(thisTM) == false) {
@@ -2861,7 +2866,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         for (int offset : itemOffs) {
             int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isTM(itemHere)) {
+            if (allowedItems.isTM(itemHere)) {
                 // Cache replaced TMs to duplicate repeats
                 if (givenTMs[itemHere] != 0) {
                     rom[offset] = (byte) givenTMs[itemHere];
@@ -2886,7 +2891,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         for (int offset : itemOffs) {
             int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isAllowed(itemHere) && !(Gen3Constants.allowedItems.isTM(itemHere))) {
+            if (allowedItems.isAllowed(itemHere) && !(allowedItems.isTM(itemHere))) {
                 fieldItems.add(itemHere);
             }
         }
@@ -2903,7 +2908,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         for (int offset : itemOffs) {
             int itemHere = readWord(offset);
-            if (Gen3Constants.allowedItems.isAllowed(itemHere) && !(Gen3Constants.allowedItems.isTM(itemHere))) {
+            if (allowedItems.isAllowed(itemHere) && !(allowedItems.isTM(itemHere))) {
                 // Replace it
                 writeWord(offset, iterItems.next());
             }

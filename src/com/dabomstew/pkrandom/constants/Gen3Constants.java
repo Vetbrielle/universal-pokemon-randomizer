@@ -235,9 +235,11 @@ public class Gen3Constants {
     }
 
     public static ItemList allowedItems, nonBadItems;
+    public static ItemList allowedItemsGaia, nonBadItemsGaia;
 
     static {
         setupAllowedItems();
+        setupAllowedItemsGaia();
     }
 
     private static void setupAllowedItems() {
@@ -267,6 +269,49 @@ public class Gen3Constants {
         nonBadItems.banRange(0x8F, 33); // berries
         nonBadItems.banRange(0xDE, 4); // pokemon specific
         nonBadItems.banRange(0xFE, 5); // contest scarves
+    }
+
+    private static void setupAllowedItemsGaia() {
+        allowedItemsGaia = new ItemList(698);
+        // Key items (+1 unknown item)
+        allowedItemsGaia.banSingles(0x48, 0x52, 0x78, 0x7B, 0x15E, 0x162); // Valor Ticket, Keycard, Urgent Note, Rainbow Wing, Poké Flute, Old Amber
+        allowedItemsGaia.banRange(0x3C, 3); // Jaw Fossil, Sail Fossil, Jade Orb
+        allowedItemsGaia.banRange(0x75, 2); // Cover Fossil, Plume Fossil
+        allowedItemsGaia.banRange(0x7E, 6); // Reveal Glass, Odd Payload, Machine Part, Magma Stone, Translator, Letter
+        allowedItemsGaia.banRange(0x104,6); // Coin Case, Itemfinder, Old Rod, Good Rod, Super Rod, Mega Ring
+        allowedItemsGaia.banRange(0x10C, 3); // Care Package, Dusty Tome, Redwood Card
+        allowedItemsGaia.banRange(0x112, 4); // Letter, Bike Voucher, Broken Tool, SecretPotion
+        allowedItemsGaia.banRange(0x11C,4); // Tablet Idol, Storage Key, Root Fossil, Claw Fossil
+        allowedItemsGaia.banRange(0x165,2); // Helix Fossil, Dome Fossil
+        allowedItemsGaia.banRange(0x168,3); // Bicycle, Town Map and VS Seeker
+        allowedItemsGaia.banRange(0x16C,12); // Key Items (TM Case to Silver Wing)
+
+        // Unknown blank items
+        allowedItemsGaia.banRange(0x178,322);
+
+        // HMs
+        allowedItemsGaia.banRange(339, 8);
+        // TMs
+        allowedItemsGaia.tmRange(289, 50);
+
+        // non-bad items
+        // ban Pokémon-specific hold items, berries, Mega Stones and mail
+        nonBadItemsGaia = allowedItemsGaia.copy();
+        nonBadItemsGaia.banSingles(0xCA, 0x8B, 0x120, 0x167, 0x16B); // Light Ball, Oran Berry, Glalitite, Diancite, Manectite
+        nonBadItemsGaia.banRange(0x27, 4); // Drives
+        nonBadItemsGaia.banRange(0x79, 2); // Orange Mail, Harbor Mail
+        nonBadItemsGaia.banRange(0x7C, 2); // Mech Mail, Wood Mail
+        nonBadItemsGaia.banRange(0x8F, 33); // Berries
+        nonBadItemsGaia.banRange(0xDE, 4); // Lucky Punch, Metal Powder, Thick Club, Stick
+        nonBadItemsGaia.banRange(0xFB, 5); // Contest scarves
+        nonBadItemsGaia.banRange(0xE6, 21); // Mega Stones
+        nonBadItemsGaia.banRange(0x100, 4); // Mega Stones (Medichamite to Garchompite)
+        nonBadItemsGaia.banRange(0x10A, 2); // Mega Stones (Lucarionite to Abomasite)
+        nonBadItemsGaia.banRange(0x10F, 3); // Mega Stones (Beedrillite to Slowbronite)
+        nonBadItemsGaia.banRange(0x116, 6); // Mega Stones (Steelixite to Altarianite)
+        nonBadItemsGaia.banRange(0x15B, 3); // Mega Stones (Salamencite to Latiasite)
+        nonBadItemsGaia.banRange(0x15F, 3); // Mega Stones (Latiosite to Galladite)
+        nonBadItemsGaia.banRange(0x163, 2); // Mega Stones (Audinite to Sceptilite)
     }
 
     public static void trainerTagsRS(List<Trainer> trs, int romType) {
