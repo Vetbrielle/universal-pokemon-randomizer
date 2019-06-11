@@ -381,7 +381,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     @Override
     public void loadedRom() {
         for (RomEntry re : roms) {
-            if (romCode(rom, re.romCode) && (rom[0xBC] & 0xFF) == re.version) {
+            if (romCode(rom, re.romCode) && (rom[Gen3Constants.romVersionOffset] & 0xFF) == re.version) {
                 romEntry = new RomEntry(re); // clone so we can modify
                 break;
             }
@@ -423,7 +423,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         loadTextTable(romEntry.tableFile);
 
-        if (romEntry.romCode.equals("BPRE") && romEntry.version == 0) {
+        if ((romEntry.romCode.equals("BPRE") && romEntry.version == 0) || romEntry.romCode.equals("GAIA")) {
             basicBPRE10HackSupport();
         }
 

@@ -74,6 +74,7 @@ import com.dabomstew.pkrandom.Randomizer;
 import com.dabomstew.pkrandom.Settings;
 import com.dabomstew.pkrandom.SysConstants;
 import com.dabomstew.pkrandom.Utils;
+import com.dabomstew.pkrandom.constants.Gen3Constants;
 import com.dabomstew.pkrandom.exceptions.InvalidSupplementFilesException;
 import com.dabomstew.pkrandom.exceptions.RandomizationException;
 import com.dabomstew.pkrandom.pokemon.GenRestrictions;
@@ -1069,7 +1070,7 @@ public class RandomizerGUI extends javax.swing.JFrame {
             this.pbsStandardEXPCurvesCB.setEnabled(true);
             this.pbsStandardEXPCurvesCB.setSelected(false);
 
-            this.pbsUpdateStatsCB.setEnabled(romHandler.generationOfPokemon() < 6);
+            this.pbsUpdateStatsCB.setEnabled(romHandler.generationOfPokemon() < 6 && (!romHandler.getROMCode().equals("GAIA")));
             this.pbsUpdateStatsCB.setSelected(false);
 
             if (romHandler.abilitiesPerPokemon() > 0) {
