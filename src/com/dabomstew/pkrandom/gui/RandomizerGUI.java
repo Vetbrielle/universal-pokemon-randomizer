@@ -1038,13 +1038,12 @@ public class RandomizerGUI extends javax.swing.JFrame {
             this.riRomSupportLabel.setText(bundle.getString("RandomizerGUI.romSupportPrefix") + " "
                     + this.romHandler.getSupportLevel());
             this.goUpdateMovesCheckBox.setSelected(false);
-            this.goUpdateMovesCheckBox.setSelected(false);
-            this.goUpdateMovesCheckBox.setEnabled(true);
+            this.goUpdateMovesCheckBox.setEnabled(!romHandler.getROMCode().equals("GAIA"));
             this.goUpdateMovesLegacyCheckBox.setSelected(false);
             this.goUpdateMovesLegacyCheckBox.setEnabled(false);
-            this.goUpdateMovesLegacyCheckBox.setVisible(!(romHandler instanceof Gen5RomHandler));
+            this.goUpdateMovesLegacyCheckBox.setVisible(!(romHandler instanceof Gen5RomHandler) && !romHandler.getROMCode().equals("GAIA"));
             this.goRemoveTradeEvosCheckBox.setSelected(false);
-            this.goRemoveTradeEvosCheckBox.setEnabled(true);
+            this.goRemoveTradeEvosCheckBox.setEnabled(!romHandler.getROMCode().equals("GAIA"));
             this.goCondenseEvosCheckBox.setSelected(false);
             this.goCondenseEvosCheckBox.setEnabled(true);
             this.raceModeCB.setSelected(false);
@@ -1295,7 +1294,7 @@ public class RandomizerGUI extends javax.swing.JFrame {
         // e.g. wild pokemon / trainer pokemon "modifier"
         // and the 3 starter pokemon dropdowns
 
-        if (this.goUpdateMovesCheckBox.isSelected() && !(romHandler instanceof Gen5RomHandler)) {
+        if (this.goUpdateMovesCheckBox.isSelected() && !(romHandler instanceof Gen5RomHandler) && !romHandler.getROMCode().equals("GAIA")) {
             this.goUpdateMovesLegacyCheckBox.setEnabled(true);
         } else {
             this.goUpdateMovesLegacyCheckBox.setEnabled(false);

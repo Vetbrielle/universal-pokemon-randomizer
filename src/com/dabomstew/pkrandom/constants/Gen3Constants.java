@@ -510,6 +510,69 @@ public class Gen3Constants {
 
     }
 
+    public static void trainerTagsGaia(List<Trainer> trs) {
+        // Gym Leaders
+        tag(trs, 0x19E, "GYM1");
+        tag(trs, 0x19F, "GYM2");
+        tag(trs, 0x1A0, "GYM3");
+        tag(trs, 0x1A1, "GYM4");
+        tag(trs, 0x1A2, "GYM5");
+        tag(trs, 0x1A3, "GYM6");
+        tag(trs, 0x1A4, "GYM7");
+        tag(trs, 0x1A5, "GYM8");
+
+        // E4 Round 1
+        tag(trs, 0x19A, "ELITE1-1");
+        tag(trs, 0x19B, "ELITE2-1");
+        tag(trs, 0x19C, "ELITE3-1");
+        tag(trs, 0x19D, "ELITE4-1");
+
+        // E4 Round 2
+        tag(trs, 0x2DF, "ELITE1-2");
+        tag(trs, 0x2E0, "ELITE2-2");
+        tag(trs, 0x2E1, "ELITE3-2");
+        tag(trs, 0x2E2, "ELITE4-2");
+
+        // Initial Rival
+        tag(trs, 0x146, "RIVAL1-0");
+        tag(trs, 0x147, "RIVAL1-1");
+        tag(trs, 0x148, "RIVAL1-2");
+
+        // Nestpine Town
+        tag(trs, 0x149, "RIVAL2-0");
+        tag(trs, 0x14A, "RIVAL2-1");
+        tag(trs, 0x14B, "RIVAL2-2");
+
+        // Battle Marsh
+        tag(trs, 0x1AA, "RIVAL3-0");
+        tag(trs, 0x1AB, "RIVAL3-1");
+        tag(trs, 0x1AC, "RIVAL3-2");
+
+        // Precimos Island
+        tag(trs, 0x1AD, "RIVAL4-0");
+        tag(trs, 0x1AE, "RIVAL4-1");
+        tag(trs, 0x1AF, "RIVAL4-2");
+
+        // Ikos Canyon
+        tag(trs, 0x1B0, "RIVAL5-0");
+        tag(trs, 0x1B1, "RIVAL5-1");
+        tag(trs, 0x1B2, "RIVAL5-2");
+
+        // Victory Falls
+        tag(trs, 0x1B3, "RIVAL6-0");
+        tag(trs, 0x1B4, "RIVAL6-1");
+        tag(trs, 0x1B5, "RIVAL6-2");
+
+        // Themed
+        tag(trs, "THEMED:EUNICE", 0x3F, 0x21F, 0x280, 0x2DE);
+        tag(trs, "THEMED:ENOCH", 0x51, 0x220);
+        tag(trs, "THEMED:EZEKIEL", 0x119, 0x221);
+        tag(trs, "THEMED:MORGANA", 0x1F4, 0x21E, 0x232, 0x222);
+
+        // Herschel
+        tag(trs, "UBER", 0x1B6, 0x1B7, 0x1B8, 0x2E3);
+    }
+
     private static void tag(List<Trainer> trainers, int trainerNum, String tag) {
         trainers.get(trainerNum - 1).tag = tag;
     }

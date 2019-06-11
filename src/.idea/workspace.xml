@@ -2,11 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/config/gen3_offsets.ini" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/config/gen3_offsets.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/Bundle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/Bundle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$46.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$47.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$49.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$50.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$51.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$52.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$53.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$54.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$55.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$56.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$56.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$57.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$57.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$58.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$58.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$59.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$59.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$60.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$61.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$62.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$62.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$63.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$63.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$64.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$64.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$65.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$65.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$66.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$66.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$67.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$67.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$68.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$68.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$69.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$69.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$70.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$70.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$71.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$71.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$72.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$72.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$73.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$73.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/gui/RandomizerGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$EvolutionPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$EvolutionPair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +102,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="2514" lean-forward="true" selection-start-line="2514" selection-end-line="2514" />
+            <state relative-caret-position="264">
+              <caret line="1484" column="61" selection-start-line="1484" selection-start-column="61" selection-end-line="1484" selection-end-column="61" />
               <folding>
                 <element signature="e#4580#4597#0" expanded="true" />
                 <element signature="e#37359#37360#0" expanded="true" />
@@ -33,36 +115,45 @@
                 <element signature="e#44797#44798#0" expanded="true" />
                 <element signature="e#45885#45886#0" expanded="true" />
                 <element signature="e#46202#46203#0" expanded="true" />
-                <element signature="e#69847#69848#0" expanded="true" />
-                <element signature="e#76651#76652#0" expanded="true" />
+                <element signature="e#69972#69973#0" expanded="true" />
+                <element signature="e#76776#76777#0" expanded="true" />
                 <element signature="e#82250#82251#0" expanded="true" />
                 <element signature="e#82316#82317#0" expanded="true" />
-                <element signature="e#82412#82413#0" expanded="true" />
-                <element signature="e#82501#82502#0" expanded="true" />
-                <element signature="e#89391#89392#0" expanded="true" />
-                <element signature="e#89478#89479#0" expanded="true" />
-                <element signature="e#89754#89755#0" expanded="true" />
-                <element signature="e#90518#90519#0" expanded="true" />
-                <element signature="e#106828#106829#0" expanded="true" />
-                <element signature="e#107981#107982#0" expanded="true" />
-                <element signature="e#108240#108241#0" expanded="true" />
-                <element signature="e#109363#109364#0" expanded="true" />
-                <element signature="e#109458#109459#0" expanded="true" />
-                <element signature="e#109916#109917#0" expanded="true" />
-                <element signature="e#110001#110002#0" expanded="true" />
-                <element signature="e#110079#110080#0" expanded="true" />
+                <element signature="e#82537#82538#0" expanded="true" />
+                <element signature="e#82626#82627#0" expanded="true" />
+                <element signature="e#89516#89517#0" expanded="true" />
+                <element signature="e#89603#89604#0" expanded="true" />
+                <element signature="e#89879#89880#0" expanded="true" />
+                <element signature="e#90643#90644#0" expanded="true" />
+                <element signature="e#106953#106954#0" expanded="true" />
+                <element signature="e#108106#108107#0" expanded="true" />
+                <element signature="e#108365#108366#0" expanded="true" />
+                <element signature="e#109488#109489#0" expanded="true" />
+                <element signature="e#109583#109584#0" expanded="true" />
+                <element signature="e#110041#110042#0" expanded="true" />
+                <element signature="e#110126#110127#0" expanded="true" />
+                <element signature="e#110204#110205#0" expanded="true" />
                 <element signature="e#110142#110143#0" expanded="true" />
                 <element signature="e#110219#110220#0" expanded="true" />
-                <element signature="e#111333#111334#0" expanded="true" />
-                <element signature="e#111454#111455#0" expanded="true" />
-                <element signature="e#123132#123133#0" expanded="true" />
-                <element signature="e#123220#123221#0" expanded="true" />
-                <element signature="e#123696#123697#0" expanded="true" />
-                <element signature="e#129574#129575#0" expanded="true" />
-                <element signature="e#129652#129653#0" expanded="true" />
-                <element signature="e#130440#130441#0" expanded="true" />
-                <element signature="e#136501#136502#0" expanded="true" />
+                <element signature="e#111458#111459#0" expanded="true" />
+                <element signature="e#111579#111580#0" expanded="true" />
+                <element signature="e#123257#123258#0" expanded="true" />
+                <element signature="e#123345#123346#0" expanded="true" />
+                <element signature="e#123821#123822#0" expanded="true" />
+                <element signature="e#129699#129700#0" expanded="true" />
+                <element signature="e#129777#129778#0" expanded="true" />
+                <element signature="e#130565#130566#0" expanded="true" />
+                <element signature="e#136626#136627#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="572" column="51" selection-start-line="572" selection-start-column="51" selection-end-line="572" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -70,78 +161,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="455" column="42" lean-forward="true" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="42" />
+            <state relative-caret-position="233">
+              <caret line="1054" column="55" selection-start-line="1054" selection-start-column="51" selection-end-line="1054" selection-end-column="55" />
               <folding>
-                <element signature="e#8755#8756#0" expanded="true" />
-                <element signature="e#8842#8843#0" expanded="true" />
-                <element signature="e#9546#9547#0" expanded="true" />
-                <element signature="e#9644#9645#0" expanded="true" />
-                <element signature="e#17450#17451#0" expanded="true" />
-                <element signature="e#17527#17528#0" expanded="true" />
                 <element signature="e#17539#17540#0" expanded="true" />
                 <element signature="e#17566#17567#0" expanded="true" />
-                <element signature="e#65619#65620#0" expanded="true" />
-                <element signature="e#65682#65683#0" expanded="true" />
-                <element signature="e#140219#140220#0" expanded="true" />
-                <element signature="e#140280#140281#0" expanded="true" />
-                <element signature="e#140883#140884#0" expanded="true" />
-                <element signature="e#140941#140942#0" expanded="true" />
-                <element signature="e#148773#148774#0" expanded="true" />
-                <element signature="e#148800#148801#0" expanded="true" />
-                <element signature="e#148858#148859#0" expanded="true" />
-                <element signature="e#148905#148906#0" expanded="true" />
-                <element signature="e#148964#148965#0" expanded="true" />
-                <element signature="e#148989#148990#0" expanded="true" />
-                <element signature="e#149204#149205#0" expanded="true" />
-                <element signature="e#149265#149266#0" expanded="true" />
-                <element signature="e#149370#149371#0" expanded="true" />
-                <element signature="e#149431#149432#0" expanded="true" />
-                <element signature="e#149533#149534#0" expanded="true" />
-                <element signature="e#149594#149595#0" expanded="true" />
-                <element signature="e#150049#150050#0" expanded="true" />
-                <element signature="e#150074#150075#0" expanded="true" />
-                <element signature="e#150129#150130#0" expanded="true" />
-                <element signature="e#150153#150154#0" expanded="true" />
-                <element signature="e#150338#150339#0" expanded="true" />
-                <element signature="e#150366#150367#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="144" column="48" lean-forward="true" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="165" column="41" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="213" column="25" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -150,15 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>typeTable</find>
-      <find>constructTypeTable</find>
-      <find>type</find>
-      <find>type.isHackOnly</find>
-      <find>fairy</find>
-      <find>MoveCount</find>
-      <find>&quot;MoveCount&quot;</find>
-      <find>getValue</find>
-      <find>Purge</find>
       <find>moves</find>
       <find>entries</find>
       <find>TMPals</find>
@@ -179,7 +195,16 @@
       <find>public static final List&lt;Integer&gt;</find>
       <find>abilitiesPer</find>
       <find>arrayEntries</find>
+      <find>IMpossible</find>
+      <find>TradeEvos</find>
       <find>abilitiesPerPokemon</find>
+      <find>rivalCarriesStarter</find>
+      <find>Fairy</find>
+      <find>goUpdateMovesLegacyCheckBo</find>
+      <find>rival</find>
+      <find>THEMED</find>
+      <find>UBER</find>
+      <find>THEME</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,27 +218,20 @@
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="746" />
-    <option name="y" value="9" />
-    <option name="width" value="1116" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="5" />
+    <option name="y" value="5" />
+    <option name="width" value="1180" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -309,18 +327,18 @@
       <workItem from="1560026972979" duration="2517000" />
       <workItem from="1560094693791" duration="820000" />
       <workItem from="1560167869977" duration="26689000" />
-      <workItem from="1560257303397" duration="13789000" />
+      <workItem from="1560257303397" duration="16799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43815000" />
+    <option name="totallyTimeSpent" value="46825000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="5" y="5" width="1180" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18017058" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3017857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -442,21 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-          <folding>
-            <element signature="e#33290#33291#0" expanded="true" />
-            <element signature="e#33328#33329#0" expanded="true" />
-            <element signature="e#36003#36004#0" expanded="true" />
-            <element signature="e#36034#36035#0" expanded="true" />
-            <element signature="e#44618#44619#0" expanded="true" />
-            <element signature="e#44663#44664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/RomFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -512,38 +515,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="1181" column="44" selection-start-line="1181" selection-start-column="39" selection-end-line="1181" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="213" column="25" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="222" column="624" selection-start-line="222" selection-start-column="624" selection-end-line="222" selection-end-column="624" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="144" column="48" lean-forward="true" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="165" column="41" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -554,58 +529,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="137" column="4" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="48" />
+        <state relative-caret-position="-4">
+          <caret line="156" column="44" lean-forward="true" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="302" column="49" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="42" column="269" selection-start-line="42" selection-start-column="264" selection-end-line="42" selection-end-column="269" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="1043" column="138" selection-start-line="1043" selection-start-column="138" selection-end-line="1043" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+          <folding>
+            <element signature="e#31214#31215#0" expanded="true" />
+            <element signature="e#31263#31264#0" expanded="true" />
+            <element signature="e#33290#33291#0" expanded="true" />
+            <element signature="e#33328#33329#0" expanded="true" />
+            <element signature="e#36003#36004#0" expanded="true" />
+            <element signature="e#36034#36035#0" expanded="true" />
+            <element signature="e#44618#44619#0" expanded="true" />
+            <element signature="e#44663#44664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="455" column="42" lean-forward="true" selection-start-line="455" selection-start-column="42" selection-end-line="455" selection-end-column="42" />
+        <state relative-caret-position="233">
+          <caret line="1054" column="55" selection-start-line="1054" selection-start-column="51" selection-end-line="1054" selection-end-column="55" />
           <folding>
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8842#8843#0" expanded="true" />
-            <element signature="e#9546#9547#0" expanded="true" />
-            <element signature="e#9644#9645#0" expanded="true" />
-            <element signature="e#17450#17451#0" expanded="true" />
-            <element signature="e#17527#17528#0" expanded="true" />
             <element signature="e#17539#17540#0" expanded="true" />
             <element signature="e#17566#17567#0" expanded="true" />
-            <element signature="e#65619#65620#0" expanded="true" />
-            <element signature="e#65682#65683#0" expanded="true" />
-            <element signature="e#140219#140220#0" expanded="true" />
-            <element signature="e#140280#140281#0" expanded="true" />
-            <element signature="e#140883#140884#0" expanded="true" />
-            <element signature="e#140941#140942#0" expanded="true" />
-            <element signature="e#148773#148774#0" expanded="true" />
-            <element signature="e#148800#148801#0" expanded="true" />
-            <element signature="e#148858#148859#0" expanded="true" />
-            <element signature="e#148905#148906#0" expanded="true" />
-            <element signature="e#148964#148965#0" expanded="true" />
-            <element signature="e#148989#148990#0" expanded="true" />
-            <element signature="e#149204#149205#0" expanded="true" />
-            <element signature="e#149265#149266#0" expanded="true" />
-            <element signature="e#149370#149371#0" expanded="true" />
-            <element signature="e#149431#149432#0" expanded="true" />
-            <element signature="e#149533#149534#0" expanded="true" />
-            <element signature="e#149594#149595#0" expanded="true" />
-            <element signature="e#150049#150050#0" expanded="true" />
-            <element signature="e#150074#150075#0" expanded="true" />
-            <element signature="e#150129#150130#0" expanded="true" />
-            <element signature="e#150153#150154#0" expanded="true" />
-            <element signature="e#150338#150339#0" expanded="true" />
-            <element signature="e#150366#150367#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="2514" lean-forward="true" selection-start-line="2514" selection-end-line="2514" />
+        <state relative-caret-position="264">
+          <caret line="1484" column="61" selection-start-line="1484" selection-start-column="61" selection-end-line="1484" selection-end-column="61" />
           <folding>
             <element signature="e#4580#4597#0" expanded="true" />
             <element signature="e#37359#37360#0" expanded="true" />
@@ -614,36 +600,43 @@
             <element signature="e#44797#44798#0" expanded="true" />
             <element signature="e#45885#45886#0" expanded="true" />
             <element signature="e#46202#46203#0" expanded="true" />
-            <element signature="e#69847#69848#0" expanded="true" />
-            <element signature="e#76651#76652#0" expanded="true" />
+            <element signature="e#69972#69973#0" expanded="true" />
+            <element signature="e#76776#76777#0" expanded="true" />
             <element signature="e#82250#82251#0" expanded="true" />
             <element signature="e#82316#82317#0" expanded="true" />
-            <element signature="e#82412#82413#0" expanded="true" />
-            <element signature="e#82501#82502#0" expanded="true" />
-            <element signature="e#89391#89392#0" expanded="true" />
-            <element signature="e#89478#89479#0" expanded="true" />
-            <element signature="e#89754#89755#0" expanded="true" />
-            <element signature="e#90518#90519#0" expanded="true" />
-            <element signature="e#106828#106829#0" expanded="true" />
-            <element signature="e#107981#107982#0" expanded="true" />
-            <element signature="e#108240#108241#0" expanded="true" />
-            <element signature="e#109363#109364#0" expanded="true" />
-            <element signature="e#109458#109459#0" expanded="true" />
-            <element signature="e#109916#109917#0" expanded="true" />
-            <element signature="e#110001#110002#0" expanded="true" />
-            <element signature="e#110079#110080#0" expanded="true" />
+            <element signature="e#82537#82538#0" expanded="true" />
+            <element signature="e#82626#82627#0" expanded="true" />
+            <element signature="e#89516#89517#0" expanded="true" />
+            <element signature="e#89603#89604#0" expanded="true" />
+            <element signature="e#89879#89880#0" expanded="true" />
+            <element signature="e#90643#90644#0" expanded="true" />
+            <element signature="e#106953#106954#0" expanded="true" />
+            <element signature="e#108106#108107#0" expanded="true" />
+            <element signature="e#108365#108366#0" expanded="true" />
+            <element signature="e#109488#109489#0" expanded="true" />
+            <element signature="e#109583#109584#0" expanded="true" />
+            <element signature="e#110041#110042#0" expanded="true" />
+            <element signature="e#110126#110127#0" expanded="true" />
+            <element signature="e#110204#110205#0" expanded="true" />
             <element signature="e#110142#110143#0" expanded="true" />
             <element signature="e#110219#110220#0" expanded="true" />
-            <element signature="e#111333#111334#0" expanded="true" />
-            <element signature="e#111454#111455#0" expanded="true" />
-            <element signature="e#123132#123133#0" expanded="true" />
-            <element signature="e#123220#123221#0" expanded="true" />
-            <element signature="e#123696#123697#0" expanded="true" />
-            <element signature="e#129574#129575#0" expanded="true" />
-            <element signature="e#129652#129653#0" expanded="true" />
-            <element signature="e#130440#130441#0" expanded="true" />
-            <element signature="e#136501#136502#0" expanded="true" />
+            <element signature="e#111458#111459#0" expanded="true" />
+            <element signature="e#111579#111580#0" expanded="true" />
+            <element signature="e#123257#123258#0" expanded="true" />
+            <element signature="e#123345#123346#0" expanded="true" />
+            <element signature="e#123821#123822#0" expanded="true" />
+            <element signature="e#129699#129700#0" expanded="true" />
+            <element signature="e#129777#129778#0" expanded="true" />
+            <element signature="e#130565#130566#0" expanded="true" />
+            <element signature="e#136626#136627#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="572" column="51" selection-start-line="572" selection-start-column="51" selection-end-line="572" selection-end-column="51" />
         </state>
       </provider>
     </entry>

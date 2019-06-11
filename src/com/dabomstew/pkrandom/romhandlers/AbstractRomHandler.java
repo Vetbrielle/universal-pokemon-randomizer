@@ -969,7 +969,7 @@ public abstract class AbstractRomHandler implements RomHandler {
         totalTypeWeighting = 0;
 
         // Construct groupings for types
-        // Anything starting with GYM or ELITE or CHAMPION is a group
+        // Anything starting with GYM or ELITE or CHAMPION or THEMED is a group
         Set<Trainer> assignedTrainers = new TreeSet<Trainer>();
         Map<String, List<Trainer>> groups = new TreeMap<String, List<Trainer>>();
         for (Trainer t : currentTrainers) {
@@ -1651,6 +1651,7 @@ public abstract class AbstractRomHandler implements RomHandler {
         Set<Integer> allBanned = new HashSet<Integer>(noBroken ? this.getGameBreakingMoves() : Collections.EMPTY_SET);
         allBanned.addAll(hms);
         allBanned.addAll(this.getMovesBannedFromLevelup());
+        allBanned.add(0);
 
         // Build sets of moves
         List<Move> validMoves = new ArrayList<Move>();
