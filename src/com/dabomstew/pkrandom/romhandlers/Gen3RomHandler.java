@@ -24,10 +24,7 @@ package com.dabomstew.pkrandom.romhandlers;
 /*----------------------------------------------------------------------------*/
 
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -334,6 +331,15 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         return detectRomInner(rom, rom.length);
     }
 
+    private static boolean isGaia(byte[] rom) {
+        return readLongWithRom(Gen3Constants.efrlgPokemonNamesPointer, rom) == 0x08745850;
+    }
+
+    private static int readLongWithRom(int offset, byte[] rom) {
+        return (rom[offset] & 0xFF) + ((rom[offset + 1] & 0xFF) << 8) + ((rom[offset + 2] & 0xFF) << 16)
+                + (((rom[offset + 3] & 0xFF)) << 24);
+    }
+
     private static boolean detectRomInner(byte[] rom, int romSize) {
         if (romSize != Gen3Constants.size8M && romSize != Gen3Constants.size16M && romSize != Gen3Constants.size32M) {
             return false; // size check
@@ -348,7 +354,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             rom[Gen3Constants.headerChecksumOffset] = 0x66;
         }
         // Special case for Gaia
-        if (romName(rom, Gen3Constants.gaiaROMName)) {
+        if (romName(rom, Gen3Constants.gaiaROMName) || isGaia(rom)) {
             // give it a rom code so it can be detected
             rom[Gen3Constants.romCodeOffset] = 'G';
             rom[Gen3Constants.romCodeOffset + 1] = 'A';
@@ -425,6 +431,14 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             basicBPRE10HackSupport();
         }
 
+        if (!romName(rom, Gen3Constants.gaiaROMName) && romEntry.romType == Gen3Constants.RomType_Gaia) {
+            System.out.println("v3.2 detected");
+
+            // Apply Gaia v3.2 fixer patch
+            applyGaiaFixerPatch();
+            System.out.println("Fixed!");
+        }
+
         if (romEntry.romType == Gen3Constants.RomType_Gaia) evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
 
         loadPokemonNames();
@@ -465,6 +479,15 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         }
     }
 
+    private void applyGaiaFixerPatch() {
+        String patchName = "gaia_three_point_two_fixer";
+
+        try {
+            FileFunctions.applyPatch(rom, patchName);
+        } catch (IOException e) {
+            throw new RandomizerIOException(e);
+        }
+    }
     private int findPointerPrefixAndSuffix(String prefix, String suffix) {
         if (prefix.length() % 2 != 0 || suffix.length() % 2 != 0) {
             return -1;

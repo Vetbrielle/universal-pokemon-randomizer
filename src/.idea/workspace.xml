@@ -2,16 +2,166 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="universal-pokemon-randomizer" />
+      <artifact name="universal-pokemon-randomizer:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/universal_pokemon_randomizer_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/universal_pokemon_randomizer.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/app/universal-pokemon-randomizer.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/app/universal_pokemon_randomizer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/packager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/THIRDPARTYLICENSEREADME-JAVAFX.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/THIRDPARTYLICENSEREADME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/Welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/accessibility.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/calendars.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/charsets.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/classlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/cmm/CIEXYZ.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/cmm/GRAY.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/cmm/LINEAR_RGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/cmm/PYCC.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/cmm/sRGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/content-types.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/currency.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/access-bridge-32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/cldrdata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/dnsns.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/jaccess.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/jfxrt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/localedata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/nashorn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/sunec.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/sunjce_provider.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/sunmscapi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/sunpkcs11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/ext/zipfs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/flavormap.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fontconfig.bfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fontconfig.properties.src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaBrightDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaBrightDemiItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaBrightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaBrightRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaSansDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaSansRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaTypewriterBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/fonts/LucidaTypewriterRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/hijrah-config-umalqura.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/i386/jvm.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/cursors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/invalid32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_CopyDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_CopyNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_LinkDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_LinkNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_MoveDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/images/cursors/win32_MoveNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/javaws.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jce.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jfr.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jfr/default.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jfr/profile.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jfxswt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jsse.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/jvm.hprof.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/management-agent.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/management/jmxremote.access" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/management/jmxremote.password.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/management/management.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/management/snmp.acl.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/net.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/plugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/psfont.properties.ja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/psfontj2d.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/resources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/rt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/blacklist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/blacklisted.certs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/cacerts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/java.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/java.security" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/javaws.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/policy/limited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/policy/limited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/policy/unlimited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/policy/unlimited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/security/trusted.libraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/sound.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/tzdb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/runtime/lib/tzmappings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/universal-pokemon-randomizer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/universal-pokemon-randomizer.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal-pokemon-randomizer/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal_pokemon_randomizer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal_pokemon_randomizer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/bundles/universal_pokemon_randomizer.jnlp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/universal_pokemon_randomizer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/universal_pokemon_randomizer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer/universal_pokemon_randomizer.jnlp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer_jar/universal-pokemon-randomizer_jar.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/universal_pokemon_randomizer_jar/universal-pokemon-randomizer_jar.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/.idea/artifacts/universal_pokemon_randomizer.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/config/gen3_offsets.ini" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/config/gen3_offsets.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$EvolutionPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler$EvolutionPair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$StaticPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$StaticPokemon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +175,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="865" column="46" selection-start-line="865" selection-start-column="46" selection-end-line="865" selection-end-column="46" />
+            <state relative-caret-position="556">
+              <caret line="435" lean-forward="true" selection-start-line="435" selection-end-line="435" />
               <folding>
                 <element signature="e#37543#37544#0" expanded="true" />
                 <element signature="e#37586#37587#0" expanded="true" />
@@ -47,6 +197,8 @@
                 <element signature="e#70199#70200#0" expanded="true" />
                 <element signature="e#76959#76960#0" expanded="true" />
                 <element signature="e#77003#77004#0" expanded="true" />
+                <element signature="e#83432#83433#0" expanded="true" />
+                <element signature="e#83498#83499#0" expanded="true" />
                 <element signature="e#82720#82721#0" expanded="true" />
                 <element signature="e#82764#82765#0" expanded="true" />
                 <element signature="e#82809#82810#0" expanded="true" />
@@ -100,11 +252,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/FileFunctions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="207" column="77" lean-forward="true" selection-start-line="207" selection-start-column="77" selection-end-line="207" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen2RomHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="1658" column="36" selection-start-line="1658" selection-start-column="36" selection-end-line="1658" selection-end-column="36" />
+              <folding>
+                <element signature="e#4556#4572#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen4RomHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="2638" column="31" selection-start-line="2638" selection-start-column="31" selection-end-line="2638" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="186" column="32" lean-forward="true" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
+            <state relative-caret-position="243">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -121,8 +303,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8330">
-              <caret line="509" column="31" selection-start-line="509" selection-start-column="31" selection-end-line="509" selection-end-column="31" />
+            <state relative-caret-position="39">
+              <caret line="582" column="60" lean-forward="true" selection-start-line="582" selection-start-column="60" selection-end-line="582" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -130,8 +312,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="258" column="55" lean-forward="true" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="55" />
+            <state relative-caret-position="4080">
+              <caret line="258" column="55" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -139,8 +321,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="2058" column="60" selection-start-line="2058" selection-start-column="60" selection-end-line="2058" selection-end-column="60" />
+            <state relative-caret-position="529">
+              <caret line="2069" column="37" selection-start-line="2069" selection-start-column="37" selection-end-line="2069" selection-end-column="37" />
               <folding>
                 <element signature="e#17539#17540#0" expanded="true" />
                 <element signature="e#17566#17567#0" expanded="true" />
@@ -162,13 +344,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>abilitiesPer</find>
-      <find>arrayEntries</find>
-      <find>IMpossible</find>
-      <find>TradeEvos</find>
-      <find>abilitiesPerPokemon</find>
-      <find>rivalCarriesStarter</find>
-      <find>Fairy</find>
       <find>goUpdateMovesLegacyCheckBo</find>
       <find>rival</find>
       <find>THEMED</find>
@@ -176,7 +351,6 @@
       <find>UBER</find>
       <find>dex</find>
       <find>nat</find>
-      <find>NATIONAL_DEX_AT_START</find>
       <find>NATIONAL_DEX_AT_START</find>
       <find>miscTweaksAvailable</find>
       <find>fielditems</find>
@@ -192,6 +366,14 @@
       <find>&quot;bad&quot;</find>
       <find>bad</find>
       <find>getRegularFieldItems</find>
+      <find>pokemonList</find>
+      <find>pokes</find>
+      <find>'G'</find>
+      <find>romNameOffset</find>
+      <find>getBytes</find>
+      <find>isGaaia</find>
+      <find>rom[0xa</find>
+      <find>applyPatch</find>
     </findStrings>
     <replaceStrings>
       <replace>allowedItems</replace>
@@ -210,18 +392,18 @@
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="5" />
     <option name="y" value="5" />
-    <option name="width" value="1729" />
+    <option name="width" value="1568" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -321,18 +503,21 @@
       <workItem from="1560094693791" duration="820000" />
       <workItem from="1560167869977" duration="26689000" />
       <workItem from="1560257303397" duration="22555000" />
-      <workItem from="1560294476243" duration="708000" />
+      <workItem from="1560294476243" duration="1013000" />
+      <workItem from="1560296046529" duration="620000" />
+      <workItem from="1560297942347" duration="77000" />
+      <workItem from="1560344953834" duration="4442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53289000" />
+    <option name="totallyTimeSpent" value="58733000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="5" y="5" width="1568" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23342176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -433,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/FileFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="107" column="57" selection-start-line="107" selection-start-column="57" selection-end-line="107" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -509,9 +687,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.form" />
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -550,6 +726,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="359" column="25" selection-start-line="359" selection-start-column="25" selection-end-line="359" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4046">
@@ -557,10 +740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8330">
-          <caret line="509" column="31" selection-start-line="509" selection-start-column="31" selection-end-line="509" selection-end-column="31" />
+        <state relative-caret-position="4080">
+          <caret line="258" column="55" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -571,17 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="359" column="25" selection-start-line="359" selection-start-column="25" selection-end-line="359" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="2058" column="60" selection-start-line="2058" selection-start-column="60" selection-end-line="2058" selection-end-column="60" />
+        <state relative-caret-position="529">
+          <caret line="2069" column="37" selection-start-line="2069" selection-start-column="37" selection-end-line="2069" selection-end-column="37" />
           <folding>
             <element signature="e#17539#17540#0" expanded="true" />
             <element signature="e#17566#17567#0" expanded="true" />
@@ -589,17 +765,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="258" column="55" lean-forward="true" selection-start-line="258" selection-start-column="35" selection-end-line="258" selection-end-column="55" />
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen4RomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="2638" column="31" selection-start-line="2638" selection-start-column="31" selection-end-line="2638" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen2RomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1658" column="36" selection-start-line="1658" selection-start-column="36" selection-end-line="1658" selection-end-column="36" />
+          <folding>
+            <element signature="e#4556#4572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/FileFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="207" column="77" lean-forward="true" selection-start-line="207" selection-start-column="77" selection-end-line="207" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="582" column="60" lean-forward="true" selection-start-line="582" selection-start-column="60" selection-end-line="582" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="865" column="46" selection-start-line="865" selection-start-column="46" selection-end-line="865" selection-end-column="46" />
+        <state relative-caret-position="556">
+          <caret line="435" lean-forward="true" selection-start-line="435" selection-end-line="435" />
           <folding>
             <element signature="e#37543#37544#0" expanded="true" />
             <element signature="e#37586#37587#0" expanded="true" />
@@ -617,6 +824,8 @@
             <element signature="e#70199#70200#0" expanded="true" />
             <element signature="e#76959#76960#0" expanded="true" />
             <element signature="e#77003#77004#0" expanded="true" />
+            <element signature="e#83432#83433#0" expanded="true" />
+            <element signature="e#83498#83499#0" expanded="true" />
             <element signature="e#82720#82721#0" expanded="true" />
             <element signature="e#82764#82765#0" expanded="true" />
             <element signature="e#82809#82810#0" expanded="true" />
@@ -669,20 +878,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="186" column="32" lean-forward="true" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>universal-pokemon-randomizer</last-edited>
+          <last-edited>universal-pokemon-randomizer:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

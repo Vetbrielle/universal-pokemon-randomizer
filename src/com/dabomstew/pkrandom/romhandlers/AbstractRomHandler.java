@@ -2068,7 +2068,6 @@ public abstract class AbstractRomHandler implements RomHandler {
                 Move mv = moveData.get(move);
                 double probability = 0.5;
                 if (preferSameType) {
-                    System.out.println(pkmn + " " + mv);
                     if (pkmn.primaryType.equals(mv.type)
                             || (pkmn.secondaryType != null && pkmn.secondaryType.equals(mv.type))) {
                         probability = 0.9;
