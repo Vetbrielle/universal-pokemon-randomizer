@@ -10,9 +10,6 @@ Universal Pokémon Randomizer Homepage: http://pokehacks.dabomstew.com/randomize
 
 Pokémon Gaia Version: https://www.pokecommunity.com/showthread.php?t=326118
 
-
-**Notice: This randomizer currently only supports the (unreleased) Pokémon Gaia Version v4.0 build.**
-
 The remainder of this README.md is copied from Dabomstew's original.
 
 # For Program Users

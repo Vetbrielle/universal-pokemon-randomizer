@@ -324,7 +324,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private int pokedexCount;
     private String[] pokeNames;
     private ItemList allowedItems, nonBadItems;
-    private int evolutionsPerPokemon = Gen3Constants.gen3EvolutionsPerPokemon;
+    private int evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
 
     @Override
     public boolean detectRom(byte[] rom) {
@@ -432,11 +432,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         }
 
         if (!romName(rom, Gen3Constants.gaiaROMName) && romEntry.romType == Gen3Constants.RomType_Gaia) {
-            System.out.println("v3.2 detected");
-
             // Apply Gaia v3.2 fixer patch
             applyGaiaFixerPatch();
-            System.out.println("Fixed!");
         }
 
         if (romEntry.romType == Gen3Constants.RomType_Gaia) evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
@@ -2299,11 +2296,11 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             int idx = pokedexToInternal[pk.number];
             int evoOffset = baseOffset + (idx * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize);
             for (int j = 0; j < evolutionsPerPokemon; j++) {
-                int method = readWord(evoOffset + j * 8);
-                int evolvingTo = readWord(evoOffset + j * 8 + 4);
+                int method = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize);
+                int evolvingTo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 4);
                 if (method >= 1 && method <= Gen3Constants.evolutionMethodCount && evolvingTo >= 1
                         && evolvingTo <= numInternalPokes) {
-                    int extraInfo = readWord(evoOffset + j * 8 + 2);
+                    int extraInfo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 2);
                     EvolutionType et = EvolutionType.fromIndex(3, method);
                     Evolution evo = new Evolution(pk, pokesInternal[evolvingTo], true, et, extraInfo);
                     if (!pk.evolutionsFrom.contains(evo)) {
@@ -2326,7 +2323,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
-            int evoOffset = baseOffset + (idx) * 0x28;
+            int evoOffset = baseOffset + (idx) * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize;
             int evosWritten = 0;
 
             for (Evolution evo : pk.evolutionsFrom) {
