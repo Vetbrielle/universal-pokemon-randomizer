@@ -1202,10 +1202,13 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     @Override
     public List<Integer> getStarterHeldItems() {
         List<Integer> sHeldItems = new ArrayList<Integer>();
-        if (romEntry.romType == Gen3Constants.RomType_FRLG || romEntry.romType == Gen3Constants.RomType_Gaia) {
+        if (romEntry.romType == Gen3Constants.RomType_FRLG) {
             // offset from normal starter offset as a word
             int baseOffset = romEntry.getValue("StarterPokemon");
             sHeldItems.add(readWord(baseOffset + Gen3Constants.frlgStarterItemsOffset));
+        } else if (romEntry.romType == Gen3Constants.RomType_Gaia) {
+            // hardcoding offsets, so sue me
+            sHeldItems.add(readWord(0xABDB3B));
         } else {
             int baseOffset = romEntry.getValue("StarterItems");
             int i1 = rom[baseOffset] & 0xFF;
@@ -1225,10 +1228,13 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             return;
         }
         int item = items.get(0);
-        if (romEntry.romType == Gen3Constants.RomType_FRLG || romEntry.romType == Gen3Constants.RomType_Gaia) {
+        if (romEntry.romType == Gen3Constants.RomType_FRLG) {
             // offset from normal starter offset as a word
             int baseOffset = romEntry.getValue("StarterPokemon");
             writeWord(baseOffset + Gen3Constants.frlgStarterItemsOffset, item);
+        } else if (romEntry.romType == Gen3Constants.RomType_Gaia) {
+            // hardcoding offsets, so sue me
+            writeWord(0xABDB3B, item);
         } else {
             int baseOffset = romEntry.getValue("StarterItems");
             if (item <= 0xFF) {
