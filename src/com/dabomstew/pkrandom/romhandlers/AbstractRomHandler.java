@@ -2822,8 +2822,17 @@ public abstract class AbstractRomHandler implements RomHandler {
             // Setup for this loop.
             boolean hadError = false;
             for (Pokemon pk : pokemonPool) {
-                pk.evolutionsFrom.clear();
-                pk.evolutionsTo.clear();
+                // Only clear the evolutions if the Pokémon cannot Mega Evolve
+                boolean isMega = false;
+                for (Evolution ev : pk.evolutionsTo) {
+                    if (ev.type == EvolutionType.MEGA_EVOLVE) {
+                        isMega = true;
+                    }
+                }
+                if (!isMega) {
+                    pk.evolutionsFrom.clear();
+                    pk.evolutionsTo.clear();
+                }
             }
             newEvoPairs.clear();
 
@@ -2832,6 +2841,18 @@ public abstract class AbstractRomHandler implements RomHandler {
 
             for (Pokemon fromPK : pokemonPool) {
                 List<Evolution> oldEvos = originalEvos.get(fromPK);
+
+                // Do not change the evolutions for a Pokémon which can Mega Evolve
+                boolean isMega = false;
+                for (Evolution ev : oldEvos) {
+                    if (ev.type == EvolutionType.MEGA_EVOLVE) {
+                        isMega = true;
+                    }
+                }
+                if (isMega) {
+                    continue;
+                }
+                
                 for (Evolution ev : oldEvos) {
                     // Pick a Pokemon as replacement
                     replacements.clear();
@@ -2842,7 +2863,6 @@ public abstract class AbstractRomHandler implements RomHandler {
                         if (pk == fromPK) {
                             continue;
                         }
-
                         // Force same EXP curve (mandatory)
                         if (pk.growthCurve != fromPK.growthCurve) {
                             continue;
