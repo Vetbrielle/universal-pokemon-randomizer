@@ -788,12 +788,14 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         int numInternalPokes = romEntry.getValue("PokemonCount");
         pokesInternal = new Pokemon[numInternalPokes + 1];
         int offs = romEntry.getValue("PokemonStats");
+        List<Integer> completedNumbers = new ArrayList<>(); // Use the earliest form for a given dex number
         for (int i = 1; i <= numInternalPokes; i++) {
             Pokemon pk = new Pokemon();
             pk.name = pokeNames[i];
             pk.number = internalToPokedex[i];
-            if (pk.number != 0) {
+            if (pk.number != 0 && !completedNumbers.contains(pk.number)) {
                 pokes[pk.number] = pk;
+                completedNumbers.add(pk.number);
             }
             pokesInternal[i] = pk;
             int pkoffs = offs + i * Gen3Constants.baseStatsEntrySize;
@@ -1071,6 +1073,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     private static boolean romCode(byte[] rom, String codeToCheck) {
         try {
+            if (codeToCheck.equals("GAIA")) return true;
             int sigOffset = Gen3Constants.romCodeOffset;
             byte[] sigBytes = codeToCheck.getBytes("US-ASCII");
             for (int i = 0; i < sigBytes.length; i++) {
@@ -2317,6 +2320,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                         && (romEntry.romType == Gen3Constants.RomType_Gaia || method <= Gen3Constants.gen3EvolutionMethodCount)
                         && evolvingTo >= 1
                         && evolvingTo <= numInternalPokes) {
+                    // System.out.println(pk + "\n evolves to \n" + pokesInternal[evolvingTo] + "\n");
                     // Because of Mega Evolution, we skip checking if the method number is too large for Gaia
                     int extraInfo = readWord(currentEvoEntry + 2);
                     EvolutionType evoType = EvolutionType.fromIndex(generation, method);
@@ -2352,7 +2356,26 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             for (Evolution evo : pk.evolutionsFrom) {
                 writeWord(evoOffset, evo.type.toIndex(generation));
                 writeWord(evoOffset + 2, evo.extraInfo);
-                writeWord(evoOffset + 4, pokedexToInternal[evo.to.number]);
+
+                int evoSpecies = pokedexToInternal[evo.to.number];
+                // Special case for Mega Evolutions
+                if (pk.number == evoSpecies) {
+                    int megaID = 0;
+                    int previousMegaID = 0;
+                    for (int j = 1; j < internalToPokedex.length; j++) {
+                        if (pk.number == pokedexToInternal[internalToPokedex[j]]) {
+                            previousMegaID = megaID;
+                            megaID = j;
+                        }
+                    }
+                    // Extra-special case for Pokémon with 2 Megas
+                    if (previousMegaID != pk.number && evosWritten == 0) {
+                        megaID = previousMegaID;
+                    }
+                    evoSpecies = megaID;
+                }
+                writeWord(evoOffset + 4, evoSpecies);
+
                 writeWord(evoOffset + 6, 0);
                 evoOffset += 8;
                 evosWritten++;
