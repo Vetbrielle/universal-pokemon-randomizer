@@ -361,6 +361,7 @@ public abstract class AbstractRomHandler implements RomHandler {
     @Override
     public void randomizePokemonTypes(boolean evolutionSanity) {
         List<Pokemon> allPokes = this.getPokemon();
+
         if (evolutionSanity) {
             // Type randomization with evolution sanity
             copyUpEvolutionsHelper(new BasePokemonAction() {
@@ -2822,17 +2823,8 @@ public abstract class AbstractRomHandler implements RomHandler {
             // Setup for this loop.
             boolean hadError = false;
             for (Pokemon pk : pokemonPool) {
-                // Only clear the evolutions if the Pokémon cannot Mega Evolve
-                boolean isMega = false;
-                for (Evolution ev : pk.evolutionsTo) {
-                    if (ev.type == EvolutionType.MEGA_EVOLVE) {
-                        isMega = true;
-                    }
-                }
-                if (!isMega) {
-                    pk.evolutionsFrom.clear();
-                    pk.evolutionsTo.clear();
-                }
+                pk.evolutionsFrom.clear();
+                pk.evolutionsTo.clear();
             }
             newEvoPairs.clear();
 
@@ -2841,18 +2833,6 @@ public abstract class AbstractRomHandler implements RomHandler {
 
             for (Pokemon fromPK : pokemonPool) {
                 List<Evolution> oldEvos = originalEvos.get(fromPK);
-
-                // Do not change the evolutions for a Pokémon which can Mega Evolve
-                boolean isMega = false;
-                for (Evolution ev : oldEvos) {
-                    if (ev.type == EvolutionType.MEGA_EVOLVE) {
-                        isMega = true;
-                    }
-                }
-                if (isMega) {
-                    continue;
-                }
-                
                 for (Evolution ev : oldEvos) {
                     // Pick a Pokemon as replacement
                     replacements.clear();
