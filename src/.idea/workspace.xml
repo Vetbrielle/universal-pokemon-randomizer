@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$StaticPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler$StaticPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/universal-pokemon-randomizer/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.class" afterDir="false" />
-    </list>
+    <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="2370" column="66" selection-start-line="2370" selection-start-column="66" selection-end-line="2370" selection-end-column="66" />
+            <state relative-caret-position="246">
+              <caret line="2309" lean-forward="true" selection-start-line="2309" selection-end-line="2309" />
               <folding>
                 <element signature="e#38281#38282#0" expanded="true" />
                 <element signature="e#38324#38325#0" expanded="true" />
@@ -62,24 +56,24 @@
                 <element signature="e#88628#88629#0" expanded="true" />
                 <element signature="e#89341#89342#0" expanded="true" />
                 <element signature="e#89392#89393#0" expanded="true" />
-                <element signature="e#110139#110140#0" expanded="true" />
-                <element signature="e#111292#111293#0" expanded="true" />
-                <element signature="e#111551#111552#0" expanded="true" />
-                <element signature="e#112674#112675#0" expanded="true" />
-                <element signature="e#112769#112770#0" expanded="true" />
-                <element signature="e#113227#113228#0" expanded="true" />
-                <element signature="e#113312#113313#0" expanded="true" />
-                <element signature="e#113390#113391#0" expanded="true" />
-                <element signature="e#113526#113527#0" expanded="true" />
-                <element signature="e#114644#114645#0" expanded="true" />
-                <element signature="e#114765#114766#0" expanded="true" />
-                <element signature="e#126443#126444#0" expanded="true" />
-                <element signature="e#126531#126532#0" expanded="true" />
-                <element signature="e#127007#127008#0" expanded="true" />
-                <element signature="e#132801#132802#0" expanded="true" />
-                <element signature="e#132879#132880#0" expanded="true" />
-                <element signature="e#133667#133668#0" expanded="true" />
-                <element signature="e#139832#139833#0" expanded="true" />
+                <element signature="e#110087#110088#0" expanded="true" />
+                <element signature="e#111240#111241#0" expanded="true" />
+                <element signature="e#111499#111500#0" expanded="true" />
+                <element signature="e#112622#112623#0" expanded="true" />
+                <element signature="e#112717#112718#0" expanded="true" />
+                <element signature="e#113175#113176#0" expanded="true" />
+                <element signature="e#113260#113261#0" expanded="true" />
+                <element signature="e#113338#113339#0" expanded="true" />
+                <element signature="e#113474#113475#0" expanded="true" />
+                <element signature="e#114592#114593#0" expanded="true" />
+                <element signature="e#114713#114714#0" expanded="true" />
+                <element signature="e#126391#126392#0" expanded="true" />
+                <element signature="e#126479#126480#0" expanded="true" />
+                <element signature="e#126955#126956#0" expanded="true" />
+                <element signature="e#132749#132750#0" expanded="true" />
+                <element signature="e#132827#132828#0" expanded="true" />
+                <element signature="e#133615#133616#0" expanded="true" />
+                <element signature="e#139780#139781#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -390,7 +384,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70852000" />
+    <option name="totallyTimeSpent" value="71722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -811,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="2370" column="66" selection-start-line="2370" selection-start-column="66" selection-end-line="2370" selection-end-column="66" />
+        <state relative-caret-position="246">
+          <caret line="2309" lean-forward="true" selection-start-line="2309" selection-end-line="2309" />
           <folding>
             <element signature="e#38281#38282#0" expanded="true" />
             <element signature="e#38324#38325#0" expanded="true" />
@@ -845,24 +839,24 @@
             <element signature="e#88628#88629#0" expanded="true" />
             <element signature="e#89341#89342#0" expanded="true" />
             <element signature="e#89392#89393#0" expanded="true" />
-            <element signature="e#110139#110140#0" expanded="true" />
-            <element signature="e#111292#111293#0" expanded="true" />
-            <element signature="e#111551#111552#0" expanded="true" />
-            <element signature="e#112674#112675#0" expanded="true" />
-            <element signature="e#112769#112770#0" expanded="true" />
-            <element signature="e#113227#113228#0" expanded="true" />
-            <element signature="e#113312#113313#0" expanded="true" />
-            <element signature="e#113390#113391#0" expanded="true" />
-            <element signature="e#113526#113527#0" expanded="true" />
-            <element signature="e#114644#114645#0" expanded="true" />
-            <element signature="e#114765#114766#0" expanded="true" />
-            <element signature="e#126443#126444#0" expanded="true" />
-            <element signature="e#126531#126532#0" expanded="true" />
-            <element signature="e#127007#127008#0" expanded="true" />
-            <element signature="e#132801#132802#0" expanded="true" />
-            <element signature="e#132879#132880#0" expanded="true" />
-            <element signature="e#133667#133668#0" expanded="true" />
-            <element signature="e#139832#139833#0" expanded="true" />
+            <element signature="e#110087#110088#0" expanded="true" />
+            <element signature="e#111240#111241#0" expanded="true" />
+            <element signature="e#111499#111500#0" expanded="true" />
+            <element signature="e#112622#112623#0" expanded="true" />
+            <element signature="e#112717#112718#0" expanded="true" />
+            <element signature="e#113175#113176#0" expanded="true" />
+            <element signature="e#113260#113261#0" expanded="true" />
+            <element signature="e#113338#113339#0" expanded="true" />
+            <element signature="e#113474#113475#0" expanded="true" />
+            <element signature="e#114592#114593#0" expanded="true" />
+            <element signature="e#114713#114714#0" expanded="true" />
+            <element signature="e#126391#126392#0" expanded="true" />
+            <element signature="e#126479#126480#0" expanded="true" />
+            <element signature="e#126955#126956#0" expanded="true" />
+            <element signature="e#132749#132750#0" expanded="true" />
+            <element signature="e#132827#132828#0" expanded="true" />
+            <element signature="e#133615#133616#0" expanded="true" />
+            <element signature="e#139780#139781#0" expanded="true" />
           </folding>
         </state>
       </provider>
