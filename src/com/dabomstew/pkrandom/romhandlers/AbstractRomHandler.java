@@ -361,7 +361,6 @@ public abstract class AbstractRomHandler implements RomHandler {
     @Override
     public void randomizePokemonTypes(boolean evolutionSanity) {
         List<Pokemon> allPokes = this.getPokemon();
-
         if (evolutionSanity) {
             // Type randomization with evolution sanity
             copyUpEvolutionsHelper(new BasePokemonAction() {
@@ -2843,6 +2842,7 @@ public abstract class AbstractRomHandler implements RomHandler {
                         if (pk == fromPK) {
                             continue;
                         }
+
                         // Force same EXP curve (mandatory)
                         if (pk.growthCurve != fromPK.growthCurve) {
                             continue;

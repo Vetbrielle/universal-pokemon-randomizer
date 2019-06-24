@@ -375,9 +375,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             return false;
         }
         for (RomEntry re : roms) {
-            if (romName(rom, Gen3Constants.gaiaROMName) || isGaia(rom)) {
-                re.romCode = "GAIA";
-            }
             if (romCode(rom, re.romCode) && (rom[Gen3Constants.romVersionOffset] & 0xFF) == re.version) {
                 return true; // match
             }
@@ -728,11 +725,59 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                 maxPokedex = Math.max(maxPokedex, dexEntry);
             }
         }
-        this.pokedexCount = maxPokedex;
+        if (maxPokedex == Gen3Constants.unhackedMaxPokedex) {
+            // see if the slots between johto and hoenn are in use
+            // old rom hacks use them instead of expanding pokes
+            int offs = romEntry.getValue("PokemonStats");
+            int usedSlots = 0;
+            for (int i = 0; i < Gen3Constants.unhackedMaxPokedex - Gen3Constants.unhackedRealPokedex; i++) {
+                int pokeSlot = Gen3Constants.hoennPokesStart + i;
+                int pokeOffs = offs + pokeSlot * Gen3Constants.baseStatsEntrySize;
+                String lowerName = pokeNames[pokeSlot].toLowerCase();
+                if (!this.matches(rom, pokeOffs, Gen3Constants.emptyPokemonSig) && !lowerName.contains("unused")
+                        && !lowerName.equals("?") && !lowerName.equals("-")) {
+                    usedSlots++;
+                    pokedexToInternal[Gen3Constants.unhackedRealPokedex + usedSlots] = pokeSlot;
+                    internalToPokedex[pokeSlot] = Gen3Constants.unhackedRealPokedex + usedSlots;
+                } else {
+                    internalToPokedex[pokeSlot] = 0;
+                }
+            }
+            // remove the fake extra slots
+            for (int i = usedSlots + 1; i <= Gen3Constants.unhackedMaxPokedex - Gen3Constants.unhackedRealPokedex; i++) {
+                pokedexToInternal[Gen3Constants.unhackedRealPokedex + i] = 0;
+            }
+            // if any slots were used at all, this is a rom hack
+            if (usedSlots > 0) {
+                this.isRomHack = true;
+            }
+            this.pokedexCount = Gen3Constants.unhackedRealPokedex + usedSlots;
+        } else {
+            this.isRomHack = true;
+            this.pokedexCount = maxPokedex;
+        }
+
     }
 
     private void constructPokemonList() {
-        pokemonList = Arrays.asList(pokes);
+        if (!this.isRomHack) {
+            // simple behavior: all pokes in the dex are valid
+            pokemonList = Arrays.asList(pokes);
+        } else {
+            // only include "valid" pokes
+            pokemonList = new ArrayList<Pokemon>();
+            pokemonList.add(null);
+            for (int i = 1; i < pokes.length; i++) {
+                Pokemon pk = pokes[i];
+                if (pk != null) {
+                    String lowerName = pk.name.toLowerCase();
+                    if (!lowerName.contains("unused") && !lowerName.equals("?")) {
+                        pokemonList.add(pk);
+                    }
+                }
+            }
+        }
+        numRealPokemon = pokemonList.size() - 1;
     }
 
     private void loadPokemonStats() {
@@ -740,14 +785,12 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         int numInternalPokes = romEntry.getValue("PokemonCount");
         pokesInternal = new Pokemon[numInternalPokes + 1];
         int offs = romEntry.getValue("PokemonStats");
-        List<Integer> completedNumbers = new ArrayList<>(); // Use the earliest form for a given dex number
         for (int i = 1; i <= numInternalPokes; i++) {
             Pokemon pk = new Pokemon();
             pk.name = pokeNames[i];
             pk.number = internalToPokedex[i];
-            if (pk.number != 0 && !completedNumbers.contains(pk.number)) {
+            if (pk.number != 0) {
                 pokes[pk.number] = pk;
-                completedNumbers.add(pk.number);
             }
             pokesInternal[i] = pk;
             int pkoffs = offs + i * Gen3Constants.baseStatsEntrySize;
@@ -757,11 +800,15 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     private void savePokemonStats() {
         // Write pokemon names & stats
-        int offs = romEntry.getValue("PokemonStats");
+        int offs = romEntry.getValue("PokemonNames");
+        int nameLen = romEntry.getValue("PokemonNameLength");
+        int offs2 = romEntry.getValue("PokemonStats");
         int numInternalPokes = romEntry.getValue("PokemonCount");
         for (int i = 1; i <= numInternalPokes; i++) {
             Pokemon pk = pokesInternal[i];
-            saveBasicPokeStats(pk, offs + i * Gen3Constants.baseStatsEntrySize);
+            int stringOffset = offs + i * nameLen;
+            writeFixedLengthString(pk.name, stringOffset, nameLen);
+            saveBasicPokeStats(pk, offs2 + i * Gen3Constants.baseStatsEntrySize);
         }
         writeEvolutions();
     }
@@ -778,8 +825,8 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             moves[i].number = i;
             moves[i].internalId = i;
             moves[i].effectIndex = rom[offs + i * 0xC] & 0xFF;
+            moves[i].hitratio = ((rom[offs + i * 0xC + 3] & 0xFF) + 0);
             moves[i].power = rom[offs + i * 0xC + 1] & 0xFF;
-            moves[i].hitratio = rom[offs + i * 0xC + 3] & 0xFF;
             moves[i].pp = rom[offs + i * 0xC + 4] & 0xFF;
             moves[i].type = Gen3Constants.typeTable[rom[offs + i * 0xC + 2]];
 
@@ -1022,7 +1069,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private static boolean romCode(byte[] rom, String codeToCheck) {
         try {
             int sigOffset = Gen3Constants.romCodeOffset;
-            if (codeToCheck.equals("GAIA")) return true;
             byte[] sigBytes = codeToCheck.getBytes("US-ASCII");
             for (int i = 0; i < sigBytes.length; i++) {
                 if (rom[sigOffset + i] != sigBytes[i]) {
@@ -1033,6 +1079,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         } catch (UnsupportedEncodingException ex) {
             return false;
         }
+
     }
 
     private int readPointer(int offset) {
@@ -2250,27 +2297,18 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         int baseOffset = romEntry.getValue("PokemonEvolutions");
         int numInternalPokes = romEntry.getValue("PokemonCount");
-
-        // Treat Gaia as its own generation
-        int generation = 3;
-        if (romEntry.romType == Gen3Constants.RomType_Gaia) generation = 6;
-
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
             int evoOffset = baseOffset + (idx * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize);
             for (int j = 0; j < evolutionsPerPokemon; j++) {
-                int currentEvoEntry = evoOffset + j * Gen3Constants.evolutionEntrySize;
-                int method = readWord(currentEvoEntry);
-                int evolvingTo = readWord(currentEvoEntry + 4);
-                if (method >= 1
-                        && (romEntry.romType == Gen3Constants.RomType_Gaia || method <= Gen3Constants.gen3EvolutionMethodCount)
-                        && evolvingTo >= 1
+                int method = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize);
+                int evolvingTo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 4);
+                if (method >= 1 && method <= Gen3Constants.evolutionMethodCount && evolvingTo >= 1
                         && evolvingTo <= numInternalPokes) {
-                    // Because of Mega Evolution, we skip checking if the method number is too large for Gaia
-                    int extraInfo = readWord(currentEvoEntry + 2);
-                    EvolutionType evoType = EvolutionType.fromIndex(generation, method);
-                    Evolution evo = new Evolution(pk, pokesInternal[evolvingTo], true, evoType, extraInfo);
+                    int extraInfo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 2);
+                    EvolutionType et = EvolutionType.fromIndex(3, method);
+                    Evolution evo = new Evolution(pk, pokesInternal[evolvingTo], true, et, extraInfo);
                     if (!pk.evolutionsFrom.contains(evo)) {
                         pk.evolutionsFrom.add(evo);
                         pokesInternal[evolvingTo].evolutionsTo.add(evo);
@@ -2288,11 +2326,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     private void writeEvolutions() {
         int baseOffset = romEntry.getValue("PokemonEvolutions");
-
-        // Treat Gaia as its own generation
-        int generation = 3;
-        if (romEntry.romType == Gen3Constants.RomType_Gaia) generation = 6;
-
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
@@ -2300,7 +2333,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             int evosWritten = 0;
 
             for (Evolution evo : pk.evolutionsFrom) {
-                writeWord(evoOffset, evo.type.toIndex(generation));
+                writeWord(evoOffset, evo.type.toIndex(3));
                 writeWord(evoOffset + 2, evo.extraInfo);
                 writeWord(evoOffset + 4, pokedexToInternal[evo.to.number]);
                 writeWord(evoOffset + 6, 0);
