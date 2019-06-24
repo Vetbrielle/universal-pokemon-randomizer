@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="" />
+    <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,68 +21,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="435" column="34" lean-forward="true" selection-start-line="435" selection-start-column="34" selection-end-line="435" selection-end-column="34" />
+            <state relative-caret-position="-5">
+              <caret line="2320" column="59" lean-forward="true" selection-start-line="2320" selection-start-column="59" selection-end-line="2320" selection-end-column="59" />
               <folding>
-                <element signature="e#83432#83433#0" expanded="true" />
-                <element signature="e#83498#83499#0" expanded="true" />
+                <element signature="e#108808#108809#0" expanded="true" />
+                <element signature="e#109961#109962#0" expanded="true" />
+                <element signature="e#110220#110221#0" expanded="true" />
+                <element signature="e#111343#111344#0" expanded="true" />
+                <element signature="e#111438#111439#0" expanded="true" />
+                <element signature="e#111896#111897#0" expanded="true" />
+                <element signature="e#111981#111982#0" expanded="true" />
+                <element signature="e#112059#112060#0" expanded="true" />
+                <element signature="e#112195#112196#0" expanded="true" />
+                <element signature="e#113313#113314#0" expanded="true" />
+                <element signature="e#113434#113435#0" expanded="true" />
+                <element signature="e#125112#125113#0" expanded="true" />
+                <element signature="e#125200#125201#0" expanded="true" />
+                <element signature="e#125676#125677#0" expanded="true" />
+                <element signature="e#131470#131471#0" expanded="true" />
+                <element signature="e#131548#131549#0" expanded="true" />
+                <element signature="e#132336#132337#0" expanded="true" />
+                <element signature="e#138501#138502#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-              <folding>
-                <element signature="e#2406#2407#0" expanded="true" />
-                <element signature="e#2466#2467#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-              <folding>
-                <element signature="e#2591#2602#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="83" column="34" lean-forward="true" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34357">
-              <caret line="2069" column="37" selection-start-line="2069" selection-start-column="37" selection-end-line="2069" selection-end-column="37" />
+            <state relative-caret-position="476">
+              <caret line="2863" column="24" selection-start-line="2863" selection-start-column="24" selection-end-line="2863" selection-end-column="24" />
               <folding>
+                <element signature="e#8755#8756#0" expanded="true" />
+                <element signature="e#8842#8843#0" expanded="true" />
+                <element signature="e#9546#9547#0" expanded="true" />
+                <element signature="e#9644#9645#0" expanded="true" />
                 <element signature="e#17539#17540#0" expanded="true" />
                 <element signature="e#17566#17567#0" expanded="true" />
               </folding>
@@ -89,10 +68,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="238" column="37" selection-start-line="238" selection-start-column="34" selection-end-line="238" selection-end-column="37" />
+            <state relative-caret-position="556">
+              <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="1004" column="24" lean-forward="true" selection-start-line="1004" selection-start-column="24" selection-end-line="1004" selection-end-column="24" />
+              <folding>
+                <element signature="e#31214#31215#0" expanded="true" />
+                <element signature="e#31263#31264#0" expanded="true" />
+                <element signature="e#33290#33291#0" expanded="true" />
+                <element signature="e#33328#33329#0" expanded="true" />
+                <element signature="e#36003#36004#0" expanded="true" />
+                <element signature="e#36034#36035#0" expanded="true" />
+                <element signature="e#37369#37370#0" expanded="true" />
+                <element signature="e#37407#37408#0" expanded="true" />
+                <element signature="e#44618#44619#0" expanded="true" />
+                <element signature="e#44663#44664#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="1839" column="17" selection-start-line="1839" selection-start-column="17" selection-end-line="1839" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -101,16 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>THEME</find>
-      <find>UBER</find>
-      <find>dex</find>
-      <find>nat</find>
-      <find>NATIONAL_DEX_AT_START</find>
-      <find>miscTweaksAvailable</find>
-      <find>fielditems</find>
-      <find>national</find>
-      <find>allowedItems</find>
-      <find>Gen3Constants.allowedItems</find>
       <find>Gen3Constants.nonBadItems</find>
       <find>nonBadItems</find>
       <find>system.out</find>
@@ -131,9 +139,20 @@
       <find>removeEvosForPokemonPool</find>
       <find>8</find>
       <find>System.out</find>
+      <find>held</find>
+      <find>starter</find>
+      <find>-1,-1,-1,-1,-1,</find>
+      <find>getEnco</find>
+      <find>sett</find>
+      <find>settings</find>
+      <find>setti</find>
+      <find>randomizeEvolutions</find>
+      <find>evo</find>
+      <find>populate</find>
     </findStrings>
     <replaceStrings>
       <replace>allowedItems</replace>
+      <replace>-1, -1, -1, -1, -1,</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -145,22 +164,23 @@
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/ExpCurve.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Encounter.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Evolution.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="5" />
-    <option name="width" value="1568" />
+    <option name="width" value="1552" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -169,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,7 +231,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,17 +285,20 @@
       <workItem from="1560297942347" duration="77000" />
       <workItem from="1560344953834" duration="5169000" />
       <workItem from="1560423902195" duration="2125000" />
+      <workItem from="1560433558141" duration="1661000" />
+      <workItem from="1560552779919" duration="14000" />
+      <workItem from="1561196821275" duration="4696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61585000" />
+    <option name="totallyTimeSpent" value="67956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -284,7 +307,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.156013" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.156013" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,13 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Evolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/RomFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -432,23 +448,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.form" />
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding>
-            <element signature="e#31214#31215#0" expanded="true" />
-            <element signature="e#31263#31264#0" expanded="true" />
-            <element signature="e#33290#33291#0" expanded="true" />
-            <element signature="e#33328#33329#0" expanded="true" />
-            <element signature="e#36003#36004#0" expanded="true" />
-            <element signature="e#36034#36035#0" expanded="true" />
-            <element signature="e#44618#44619#0" expanded="true" />
-            <element signature="e#44663#44664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/MiscTweak.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -491,87 +490,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen4RomHandler.java">
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43044">
-          <caret line="2638" column="31" selection-start-line="2638" selection-start-column="31" selection-end-line="2638" selection-end-column="31" />
+        <state relative-caret-position="833">
+          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34357">
-          <caret line="2069" column="37" selection-start-line="2069" selection-start-column="37" selection-end-line="2069" selection-end-column="37" />
+        <state relative-caret-position="4046">
+          <caret line="238" column="37" selection-start-line="238" selection-start-column="34" selection-end-line="238" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
           <folding>
-            <element signature="e#17539#17540#0" expanded="true" />
-            <element signature="e#17566#17567#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Evolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#2004#2005#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1004" column="24" lean-forward="true" selection-start-line="1004" selection-start-column="24" selection-end-line="1004" selection-end-column="24" />
+          <folding>
+            <element signature="e#31214#31215#0" expanded="true" />
+            <element signature="e#31263#31264#0" expanded="true" />
+            <element signature="e#33290#33291#0" expanded="true" />
+            <element signature="e#33328#33329#0" expanded="true" />
+            <element signature="e#36003#36004#0" expanded="true" />
+            <element signature="e#36034#36035#0" expanded="true" />
+            <element signature="e#37369#37370#0" expanded="true" />
+            <element signature="e#37407#37408#0" expanded="true" />
+            <element signature="e#44618#44619#0" expanded="true" />
+            <element signature="e#44663#44664#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19550">
-          <caret line="1215" column="47" selection-start-line="1215" selection-start-column="47" selection-end-line="1215" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/Bundle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="238" column="37" selection-start-line="238" selection-start-column="34" selection-end-line="238" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="83" column="34" lean-forward="true" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="e#2591#2602#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="1839" column="17" selection-start-line="1839" selection-start-column="17" selection-end-line="1839" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/constants/Gen3Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+        <state relative-caret-position="-9">
+          <caret line="105" column="71" lean-forward="true" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/EvolutionType.java">
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen4RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
-          <folding>
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2466#2467#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="1339" column="20" selection-start-line="1339" selection-start-column="20" selection-end-line="1339" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen5RomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="1883" column="20" selection-start-line="1883" selection-start-column="20" selection-end-line="1883" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="435" column="34" lean-forward="true" selection-start-line="435" selection-start-column="34" selection-end-line="435" selection-end-column="34" />
+        <state relative-caret-position="-5">
+          <caret line="2320" column="59" lean-forward="true" selection-start-line="2320" selection-start-column="59" selection-end-line="2320" selection-end-column="59" />
           <folding>
-            <element signature="e#83432#83433#0" expanded="true" />
-            <element signature="e#83498#83499#0" expanded="true" />
+            <element signature="e#108808#108809#0" expanded="true" />
+            <element signature="e#109961#109962#0" expanded="true" />
+            <element signature="e#110220#110221#0" expanded="true" />
+            <element signature="e#111343#111344#0" expanded="true" />
+            <element signature="e#111438#111439#0" expanded="true" />
+            <element signature="e#111896#111897#0" expanded="true" />
+            <element signature="e#111981#111982#0" expanded="true" />
+            <element signature="e#112059#112060#0" expanded="true" />
+            <element signature="e#112195#112196#0" expanded="true" />
+            <element signature="e#113313#113314#0" expanded="true" />
+            <element signature="e#113434#113435#0" expanded="true" />
+            <element signature="e#125112#125113#0" expanded="true" />
+            <element signature="e#125200#125201#0" expanded="true" />
+            <element signature="e#125676#125677#0" expanded="true" />
+            <element signature="e#131470#131471#0" expanded="true" />
+            <element signature="e#131548#131549#0" expanded="true" />
+            <element signature="e#132336#132337#0" expanded="true" />
+            <element signature="e#138501#138502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="2863" column="24" selection-start-line="2863" selection-start-column="24" selection-end-line="2863" selection-end-column="24" />
+          <folding>
+            <element signature="e#8755#8756#0" expanded="true" />
+            <element signature="e#8842#8843#0" expanded="true" />
+            <element signature="e#9546#9547#0" expanded="true" />
+            <element signature="e#9644#9645#0" expanded="true" />
+            <element signature="e#17539#17540#0" expanded="true" />
+            <element signature="e#17566#17567#0" expanded="true" />
           </folding>
         </state>
       </provider>

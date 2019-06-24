@@ -135,7 +135,7 @@ public class Gen3Constants {
 
     public static final int unhackedMaxPokedex = 411, unhackedRealPokedex = 386, hoennPokesStart = 252;
 
-    public static final int evolutionMethodCount = 15;
+    public static final int gen3EvolutionMethodCount = 15;
 
     public static final int evolutionEntrySize = 8;
     public static final int gen3EvolutionsPerPokemon = 5, gaiaEvolutionsPerPokemon = 16;

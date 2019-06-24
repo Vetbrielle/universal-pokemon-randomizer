@@ -2297,18 +2297,27 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
         int baseOffset = romEntry.getValue("PokemonEvolutions");
         int numInternalPokes = romEntry.getValue("PokemonCount");
+
+        // Treat Gaia as its own generation
+        int generation = 3;
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) generation = 6;
+
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
             int evoOffset = baseOffset + (idx * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize);
             for (int j = 0; j < evolutionsPerPokemon; j++) {
-                int method = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize);
-                int evolvingTo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 4);
-                if (method >= 1 && method <= Gen3Constants.evolutionMethodCount && evolvingTo >= 1
+                int currentEvoEntry = evoOffset + j * Gen3Constants.evolutionEntrySize;
+                int method = readWord(currentEvoEntry);
+                int evolvingTo = readWord(currentEvoEntry + 4);
+                if (method >= 1
+                        && (romEntry.romType == Gen3Constants.RomType_Gaia || method <= Gen3Constants.gen3EvolutionMethodCount)
+                        && evolvingTo >= 1
                         && evolvingTo <= numInternalPokes) {
-                    int extraInfo = readWord(evoOffset + j * Gen3Constants.evolutionEntrySize + 2);
-                    EvolutionType et = EvolutionType.fromIndex(3, method);
-                    Evolution evo = new Evolution(pk, pokesInternal[evolvingTo], true, et, extraInfo);
+                    // Because of Mega Evolution, we skip checking if the method number is too large for Gaia
+                    int extraInfo = readWord(currentEvoEntry + 2);
+                    EvolutionType evoType = EvolutionType.fromIndex(generation, method);
+                    Evolution evo = new Evolution(pk, pokesInternal[evolvingTo], true, evoType, extraInfo);
                     if (!pk.evolutionsFrom.contains(evo)) {
                         pk.evolutionsFrom.add(evo);
                         pokesInternal[evolvingTo].evolutionsTo.add(evo);
@@ -2326,6 +2335,11 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     private void writeEvolutions() {
         int baseOffset = romEntry.getValue("PokemonEvolutions");
+
+        // Treat Gaia as its own generation
+        int generation = 3;
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) generation = 6;
+
         for (int i = 1; i <= numRealPokemon; i++) {
             Pokemon pk = pokemonList.get(i);
             int idx = pokedexToInternal[pk.number];
@@ -2333,7 +2347,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             int evosWritten = 0;
 
             for (Evolution evo : pk.evolutionsFrom) {
-                writeWord(evoOffset, evo.type.toIndex(3));
+                writeWord(evoOffset, evo.type.toIndex(generation));
                 writeWord(evoOffset + 2, evo.extraInfo);
                 writeWord(evoOffset + 4, pokedexToInternal[evo.to.number]);
                 writeWord(evoOffset + 6, 0);
