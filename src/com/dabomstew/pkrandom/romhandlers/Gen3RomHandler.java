@@ -375,6 +375,9 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             return false;
         }
         for (RomEntry re : roms) {
+            if (romName(rom, Gen3Constants.gaiaROMName) || isGaia(rom)) {
+                re.romCode = "GAIA";
+            }
             if (romCode(rom, re.romCode) && (rom[Gen3Constants.romVersionOffset] & 0xFF) == re.version) {
                 return true; // match
             }
