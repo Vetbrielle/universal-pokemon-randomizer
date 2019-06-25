@@ -128,6 +128,24 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         private boolean isMoveTutor;
     }
 
+    private static class MegaEvolutions {
+        private int evolution1;
+        private int evolution2;
+        MegaEvolutions(int evolution1, int evolution2) {this.evolution1=evolution1;this.evolution2=evolution2;}
+        public void setEvolution1 (int e1) {
+            this.evolution1 = e1;
+        }
+        public void setEvolution2 (int e2) {
+            this.evolution2 = e2;
+        }
+        public int getEvolution1 () {
+            return this.evolution1;
+        }
+        public int getEvolution2 () {
+            return this.evolution2;
+        }
+    }
+
     private static List<RomEntry> roms;
 
     static {
@@ -325,6 +343,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private String[] pokeNames;
     private ItemList allowedItems, nonBadItems;
     private int evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
+    private List<MegaEvolutions> megas = new ArrayList<>();
 
     @Override
     public boolean detectRom(byte[] rom) {
@@ -446,6 +465,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         loadPokemonStats();
         constructPokemonList();
         populateEvolutions();
+        if (romEntry.romType == Gen3Constants.RomType_Gaia) populateMegaEvolutions();
         loadMoves();
 
         // Get wild Pokemon offset
@@ -2359,22 +2379,15 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                 int evoSpecies = pokedexToInternal[evo.to.number];
                 // Special case for Mega Evolutions
                 if (pk.number == internalToPokedex[evoSpecies]) {
-                    int megaID = 0;
-                    int previousMegaID = 0;
-                    // Start counting at -1 to discount the base species
-                    int numberOfMegas = -1;
-                    for (int j = 1; j < internalToPokedex.length; j++) {
-                        if (pk.number == internalToPokedex[j]) {
-                            previousMegaID = megaID;
-                            megaID = j;
-                            numberOfMegas++;
-                        }
+                    MegaEvolutions megaPair = megas.get(pk.number);
+                    int mega1 = megaPair.getEvolution1();
+                    int mega2 = megaPair.getEvolution2();
+                    if (mega1 != 0) {
+                        evoSpecies = mega1;
                     }
-                    // Extra-special case for Pokémon with 2 Megas
-                    if (numberOfMegas > 1 && evosWritten == 0) {
-                        megaID = previousMegaID;
+                    if (evosWritten == 1 && mega2 != 0) {
+                        evoSpecies = mega2;
                     }
-                    evoSpecies = megaID;
                 }
                 writeWord(evoOffset + 4, evoSpecies);
 
@@ -3104,6 +3117,49 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
             return Gen3Constants.frlgEarlyRequiredHMMoves;
         } else {
             return Gen3Constants.rseEarlyRequiredHMMoves;
+        }
+    }
+
+    private void populateMegaEvolutions() {
+        megas.add(new MegaEvolutions(0,0)); // Zero-indexing
+        for (int i = 1; i <= numRealPokemon; i++) {
+            Pokemon pk = pokemonList.get(i);
+            int evosWritten = 0;
+
+            MegaEvolutions megaPair = new MegaEvolutions(0,0);
+            for (Evolution evo : pk.evolutionsFrom) {
+                int evoSpecies = pokedexToInternal[evo.to.number];
+                if (pk.number == internalToPokedex[evoSpecies]) {
+                    int megaID = 0;
+                    int previousMegaID = 0;
+                    // Start counting at -1 to discount the base species
+                    int numberOfMegas = -1;
+                    for (int j = 1; j < internalToPokedex.length; j++) {
+                        if (pk.number == internalToPokedex[j]) {
+                            previousMegaID = megaID;
+                            megaID = j;
+                            numberOfMegas++;
+                        }
+                    }
+                    // Extra-special case for Pokémon with 2 Megas
+                    if (numberOfMegas > 1 && evosWritten == 0) {
+                        megaID = previousMegaID;
+                    }
+
+                    if (megaID != 0) {
+                        if (megaPair.getEvolution1() == 0) {
+                            megaPair.setEvolution1(megaID);
+                        } else {
+                            megaPair.setEvolution2(megaID);
+                        }
+                    }
+                }
+                evosWritten++;
+                if (evosWritten == evolutionsPerPokemon) {
+                    break;
+                }
+            }
+            megas.add(megaPair);
         }
     }
 
