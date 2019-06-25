@@ -513,10 +513,14 @@ public class Randomizer {
         }
 
         // Mega Evolutions
-        if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
-            romHandler.adaptMegaEvolutions();
-        } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
-            romHandler.randomizeMegaEvolutions();
+        if (settings.getMegaMod() != Settings.MegaMod.UNCHANGED) {
+            if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
+                romHandler.adaptMegaEvolutions();
+            } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
+                romHandler.randomizeMegaEvolutions();
+            }
+            log.println("--Mega Evolutions--");
+
         }
 
         // Signature...

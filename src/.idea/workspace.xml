@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3c0f62-b2ff-4c2a-a728-446f3558a33d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,65 +28,42 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="3171" column="39" selection-start-line="3171" selection-start-column="39" selection-end-line="3171" selection-end-column="39" />
+            <state relative-caret-position="389">
+              <caret line="2387" column="57" selection-start-line="2387" selection-start-column="57" selection-end-line="2387" selection-end-column="57" />
               <folding>
                 <element signature="e#5500#5501#0" expanded="true" />
                 <element signature="e#5544#5545#0" expanded="true" />
+                <element signature="e#5644#5645#0" expanded="true" />
+                <element signature="e#5690#5691#0" expanded="true" />
                 <element signature="e#5589#5590#0" expanded="true" />
                 <element signature="e#5633#5634#0" expanded="true" />
-                <element signature="e#5671#5672#0" expanded="true" />
-                <element signature="e#5717#5718#0" expanded="true" />
                 <element signature="e#5755#5756#0" expanded="true" />
                 <element signature="e#5801#5802#0" expanded="true" />
-                <element signature="e#84651#84652#0" expanded="true" />
-                <element signature="e#84717#84718#0" expanded="true" />
-                <element signature="e#110501#110502#0" expanded="true" />
-                <element signature="e#111654#111655#0" expanded="true" />
-                <element signature="e#111913#111914#0" expanded="true" />
-                <element signature="e#113036#113037#0" expanded="true" />
-                <element signature="e#113131#113132#0" expanded="true" />
-                <element signature="e#113589#113590#0" expanded="true" />
-                <element signature="e#113674#113675#0" expanded="true" />
-                <element signature="e#113752#113753#0" expanded="true" />
-                <element signature="e#113888#113889#0" expanded="true" />
-                <element signature="e#115006#115007#0" expanded="true" />
-                <element signature="e#115127#115128#0" expanded="true" />
-                <element signature="e#126805#126806#0" expanded="true" />
-                <element signature="e#126893#126894#0" expanded="true" />
-                <element signature="e#127369#127370#0" expanded="true" />
-                <element signature="e#133163#133164#0" expanded="true" />
-                <element signature="e#133241#133242#0" expanded="true" />
-                <element signature="e#134029#134030#0" expanded="true" />
-                <element signature="e#142308#142309#0" expanded="true" />
+                <element signature="e#5918#5919#0" expanded="true" />
+                <element signature="e#5968#5969#0" expanded="true" />
+                <element signature="e#6016#6017#0" expanded="true" />
+                <element signature="e#6068#6069#0" expanded="true" />
+                <element signature="e#84899#84900#0" expanded="true" />
+                <element signature="e#84965#84966#0" expanded="true" />
+                <element signature="e#110743#110744#0" expanded="true" />
+                <element signature="e#111896#111897#0" expanded="true" />
+                <element signature="e#112155#112156#0" expanded="true" />
+                <element signature="e#113278#113279#0" expanded="true" />
+                <element signature="e#113373#113374#0" expanded="true" />
+                <element signature="e#113831#113832#0" expanded="true" />
+                <element signature="e#113916#113917#0" expanded="true" />
+                <element signature="e#113994#113995#0" expanded="true" />
+                <element signature="e#114130#114131#0" expanded="true" />
+                <element signature="e#115248#115249#0" expanded="true" />
+                <element signature="e#115369#115370#0" expanded="true" />
+                <element signature="e#127047#127048#0" expanded="true" />
+                <element signature="e#127135#127136#0" expanded="true" />
+                <element signature="e#127611#127612#0" expanded="true" />
+                <element signature="e#133405#133406#0" expanded="true" />
+                <element signature="e#133483#133484#0" expanded="true" />
+                <element signature="e#134271#134272#0" expanded="true" />
+                <element signature="e#145412#145413#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="509" column="23" lean-forward="true" selection-start-line="509" selection-start-column="23" selection-end-line="509" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="364" column="45" lean-forward="true" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -93,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="2605" column="56" lean-forward="true" selection-start-line="2605" selection-start-column="56" selection-end-line="2605" selection-end-column="56" />
+            <state relative-caret-position="17">
+              <caret line="2823" column="44" selection-start-line="2823" selection-start-column="44" selection-end-line="2823" selection-end-column="44" />
               <folding>
                 <element signature="e#8755#8756#0" expanded="true" />
                 <element signature="e#8842#8843#0" expanded="true" />
@@ -106,40 +84,17 @@
                 <element signature="e#17566#17567#0" expanded="true" />
                 <element signature="e#65926#65927#0" expanded="true" />
                 <element signature="e#65989#65990#0" expanded="true" />
-                <element signature="e#150469#150470#0" expanded="true" />
-                <element signature="e#150494#150495#0" expanded="true" />
+                <element signature="e#115517#115526#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
+        <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="230" column="27" selection-start-line="230" selection-start-column="27" selection-end-line="230" selection-end-column="27" />
-              <folding>
-                <element signature="e#30543#30544#0" expanded="true" />
-                <element signature="e#30583#30584#0" expanded="true" />
-                <element signature="e#31214#31215#0" expanded="true" />
-                <element signature="e#31263#31264#0" expanded="true" />
-                <element signature="e#33290#33291#0" expanded="true" />
-                <element signature="e#33328#33329#0" expanded="true" />
-                <element signature="e#36003#36004#0" expanded="true" />
-                <element signature="e#36034#36035#0" expanded="true" />
-                <element signature="e#37369#37370#0" expanded="true" />
-                <element signature="e#37407#37408#0" expanded="true" />
-                <element signature="e#44618#44619#0" expanded="true" />
-                <element signature="e#44663#44664#0" expanded="true" />
-                <element signature="e#52059#52060#0" expanded="true" />
-                <element signature="e#52095#52096#0" expanded="true" />
-                <element signature="e#52293#52294#0" expanded="true" />
-                <element signature="e#52369#52370#0" expanded="true" />
-                <element signature="e#52794#52795#0" expanded="true" />
-                <element signature="e#52824#52825#0" expanded="true" />
-                <element signature="e#52980#52981#0" expanded="true" />
-                <element signature="e#53056#53057#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="542">
+              <caret line="522" selection-start-line="522" selection-end-line="522" />
             </state>
           </provider>
         </entry>
@@ -148,16 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Takes effect</find>
-      <find>updateMoves</find>
-      <find>goUpdateMovesCheckBox</find>
-      <find>impossible</find>
-      <find>Pokemon traits</find>
-      <find>Pokedex</find>
-      <find>Poke</find>
-      <find>Special Cases</find>
-      <find>Could not make</find>
-      <find>invalidSeedFile</find>
       <find>save</find>
       <find>reached</find>
       <find>randomize</find>
@@ -178,6 +123,16 @@
       <find>populat</find>
       <find>Start counting at -1 to discount the base species</find>
       <find>System.out</find>
+      <find>pk</find>
+      <find>new Pokemon</find>
+      <find>oldPoke</find>
+      <find>oldP</find>
+      <find>old</find>
+      <find>populateM</find>
+      <find>pkMega</find>
+      <find>adapt</find>
+      <find>basestats</find>
+      <find>randomizePokemonStats</find>
     </findStrings>
     <replaceStrings>
       <replace>allowedItems</replace>
@@ -206,8 +161,8 @@
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/gui/PresetLoadDialog.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java" />
-        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java" />
+        <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java" />
         <option value="$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java" />
       </list>
@@ -327,12 +282,12 @@
       <workItem from="1561196821275" duration="5338000" />
       <workItem from="1561457848162" duration="12459000" />
       <workItem from="1561470643047" duration="1130000" />
-      <workItem from="1561475395612" duration="7252000" />
+      <workItem from="1561475395612" duration="13759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94272000" />
+    <option name="totallyTimeSpent" value="100779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -599,35 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="230" column="27" selection-start-line="230" selection-start-column="27" selection-end-line="230" selection-end-column="27" />
-          <folding>
-            <element signature="e#30543#30544#0" expanded="true" />
-            <element signature="e#30583#30584#0" expanded="true" />
-            <element signature="e#31214#31215#0" expanded="true" />
-            <element signature="e#31263#31264#0" expanded="true" />
-            <element signature="e#33290#33291#0" expanded="true" />
-            <element signature="e#33328#33329#0" expanded="true" />
-            <element signature="e#36003#36004#0" expanded="true" />
-            <element signature="e#36034#36035#0" expanded="true" />
-            <element signature="e#37369#37370#0" expanded="true" />
-            <element signature="e#37407#37408#0" expanded="true" />
-            <element signature="e#44618#44619#0" expanded="true" />
-            <element signature="e#44663#44664#0" expanded="true" />
-            <element signature="e#52059#52060#0" expanded="true" />
-            <element signature="e#52095#52096#0" expanded="true" />
-            <element signature="e#52293#52294#0" expanded="true" />
-            <element signature="e#52369#52370#0" expanded="true" />
-            <element signature="e#52794#52795#0" expanded="true" />
-            <element signature="e#52824#52825#0" expanded="true" />
-            <element signature="e#52980#52981#0" expanded="true" />
-            <element signature="e#53056#53057#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen5RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -666,17 +592,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="543" column="6" selection-start-line="543" selection-start-column="6" selection-end-line="543" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="230" column="27" selection-start-line="230" selection-start-column="27" selection-end-line="230" selection-end-column="27" />
+          <folding>
+            <element signature="e#30543#30544#0" expanded="true" />
+            <element signature="e#30583#30584#0" expanded="true" />
+            <element signature="e#31214#31215#0" expanded="true" />
+            <element signature="e#31263#31264#0" expanded="true" />
+            <element signature="e#33290#33291#0" expanded="true" />
+            <element signature="e#33328#33329#0" expanded="true" />
+            <element signature="e#36003#36004#0" expanded="true" />
+            <element signature="e#36034#36035#0" expanded="true" />
+            <element signature="e#37369#37370#0" expanded="true" />
+            <element signature="e#37407#37408#0" expanded="true" />
+            <element signature="e#44618#44619#0" expanded="true" />
+            <element signature="e#44663#44664#0" expanded="true" />
+            <element signature="e#52059#52060#0" expanded="true" />
+            <element signature="e#52095#52096#0" expanded="true" />
+            <element signature="e#52293#52294#0" expanded="true" />
+            <element signature="e#52369#52370#0" expanded="true" />
+            <element signature="e#52794#52795#0" expanded="true" />
+            <element signature="e#52824#52825#0" expanded="true" />
+            <element signature="e#52980#52981#0" expanded="true" />
+            <element signature="e#53056#53057#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="99" column="16" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="122" column="34" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="34" />
+          <folding>
+            <element signature="e#2926#2927#0" expanded="true" />
+            <element signature="e#2994#2995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/Randomizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="509" column="23" lean-forward="true" selection-start-line="509" selection-start-column="23" selection-end-line="509" selection-end-column="40" />
+        <state relative-caret-position="542">
+          <caret line="522" selection-start-line="522" selection-end-line="522" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/AbstractRomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="2605" column="56" lean-forward="true" selection-start-line="2605" selection-start-column="56" selection-end-line="2605" selection-end-column="56" />
+        <state relative-caret-position="17">
+          <caret line="2823" column="44" selection-start-line="2823" selection-start-column="44" selection-end-line="2823" selection-end-column="44" />
           <folding>
             <element signature="e#8755#8756#0" expanded="true" />
             <element signature="e#8842#8843#0" expanded="true" />
@@ -688,59 +675,48 @@
             <element signature="e#17566#17567#0" expanded="true" />
             <element signature="e#65926#65927#0" expanded="true" />
             <element signature="e#65989#65990#0" expanded="true" />
-            <element signature="e#150469#150470#0" expanded="true" />
-            <element signature="e#150494#150495#0" expanded="true" />
+            <element signature="e#115517#115526#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/RomHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="364" column="45" lean-forward="true" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/pokemon/Pokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/romhandlers/Gen3RomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="3171" column="39" selection-start-line="3171" selection-start-column="39" selection-end-line="3171" selection-end-column="39" />
+        <state relative-caret-position="389">
+          <caret line="2387" column="57" selection-start-line="2387" selection-start-column="57" selection-end-line="2387" selection-end-column="57" />
           <folding>
             <element signature="e#5500#5501#0" expanded="true" />
             <element signature="e#5544#5545#0" expanded="true" />
+            <element signature="e#5644#5645#0" expanded="true" />
+            <element signature="e#5690#5691#0" expanded="true" />
             <element signature="e#5589#5590#0" expanded="true" />
             <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#5671#5672#0" expanded="true" />
-            <element signature="e#5717#5718#0" expanded="true" />
             <element signature="e#5755#5756#0" expanded="true" />
             <element signature="e#5801#5802#0" expanded="true" />
-            <element signature="e#84651#84652#0" expanded="true" />
-            <element signature="e#84717#84718#0" expanded="true" />
-            <element signature="e#110501#110502#0" expanded="true" />
-            <element signature="e#111654#111655#0" expanded="true" />
-            <element signature="e#111913#111914#0" expanded="true" />
-            <element signature="e#113036#113037#0" expanded="true" />
-            <element signature="e#113131#113132#0" expanded="true" />
-            <element signature="e#113589#113590#0" expanded="true" />
-            <element signature="e#113674#113675#0" expanded="true" />
-            <element signature="e#113752#113753#0" expanded="true" />
-            <element signature="e#113888#113889#0" expanded="true" />
-            <element signature="e#115006#115007#0" expanded="true" />
-            <element signature="e#115127#115128#0" expanded="true" />
-            <element signature="e#126805#126806#0" expanded="true" />
-            <element signature="e#126893#126894#0" expanded="true" />
-            <element signature="e#127369#127370#0" expanded="true" />
-            <element signature="e#133163#133164#0" expanded="true" />
-            <element signature="e#133241#133242#0" expanded="true" />
-            <element signature="e#134029#134030#0" expanded="true" />
-            <element signature="e#142308#142309#0" expanded="true" />
+            <element signature="e#5918#5919#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
+            <element signature="e#6016#6017#0" expanded="true" />
+            <element signature="e#6068#6069#0" expanded="true" />
+            <element signature="e#84899#84900#0" expanded="true" />
+            <element signature="e#84965#84966#0" expanded="true" />
+            <element signature="e#110743#110744#0" expanded="true" />
+            <element signature="e#111896#111897#0" expanded="true" />
+            <element signature="e#112155#112156#0" expanded="true" />
+            <element signature="e#113278#113279#0" expanded="true" />
+            <element signature="e#113373#113374#0" expanded="true" />
+            <element signature="e#113831#113832#0" expanded="true" />
+            <element signature="e#113916#113917#0" expanded="true" />
+            <element signature="e#113994#113995#0" expanded="true" />
+            <element signature="e#114130#114131#0" expanded="true" />
+            <element signature="e#115248#115249#0" expanded="true" />
+            <element signature="e#115369#115370#0" expanded="true" />
+            <element signature="e#127047#127048#0" expanded="true" />
+            <element signature="e#127135#127136#0" expanded="true" />
+            <element signature="e#127611#127612#0" expanded="true" />
+            <element signature="e#133405#133406#0" expanded="true" />
+            <element signature="e#133483#133484#0" expanded="true" />
+            <element signature="e#134271#134272#0" expanded="true" />
+            <element signature="e#145412#145413#0" expanded="true" />
           </folding>
         </state>
       </provider>

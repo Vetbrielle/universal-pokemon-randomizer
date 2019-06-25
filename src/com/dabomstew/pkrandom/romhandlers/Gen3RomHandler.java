@@ -129,20 +129,27 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     }
 
     private static class MegaEvolutions {
+        private Pokemon originalBaseForm;
         private int evolution1;
         private int evolution2;
         MegaEvolutions(int evolution1, int evolution2) {this.evolution1=evolution1;this.evolution2=evolution2;}
         public void setEvolution1 (int e1) {
             this.evolution1 = e1;
         }
-        public void setEvolution2 (int e2) {
-            this.evolution2 = e2;
-        }
         public int getEvolution1 () {
             return this.evolution1;
         }
+        public void setEvolution2 (int e2) {
+            this.evolution2 = e2;
+        }
         public int getEvolution2 () {
             return this.evolution2;
+        }
+        public void setOriginalBaseForm (Pokemon pk) {
+            this.originalBaseForm = pk;
+        }
+        public Pokemon getOriginalBaseForm () {
+            return this.originalBaseForm;
         }
     }
 
@@ -2378,7 +2385,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
                 int evoSpecies = pokedexToInternal[evo.to.number];
                 // Special case for Mega Evolutions
-                if (pk.number == internalToPokedex[evoSpecies]) {
+                if (evo.type == EvolutionType.MEGA_EVOLVE) {
                     MegaEvolutions megaPair = megas.get(pk.number);
                     int mega1 = megaPair.getEvolution1();
                     int mega2 = megaPair.getEvolution2();
@@ -3120,6 +3127,24 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         }
     }
 
+    private void copyStats(Pokemon destination, Pokemon source) {
+        destination.name = source.name;
+        destination.number = source.number;
+        destination.primaryType = source.primaryType;
+        destination.secondaryType = (source.secondaryType != null) ? source.secondaryType : source.primaryType;
+        destination.secondaryType = (destination.primaryType == destination.secondaryType) ? null : destination.secondaryType;
+        destination.hp = source.hp;
+        destination.attack = source.attack;
+        destination.defense = source.defense;
+        destination.spatk = source.spatk;
+        destination.spdef = source.spdef;
+        destination.speed = source.speed;
+        destination.ability1 = source.ability1;
+        destination.ability2 = source.ability2;
+        destination.expYield = source.expYield;
+        destination.growthCurve = source.growthCurve;
+    }
+
     private void populateMegaEvolutions() {
         megas.add(new MegaEvolutions(0,0)); // Zero-indexing
         for (int i = 1; i <= numRealPokemon; i++) {
@@ -3148,6 +3173,10 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
                     if (megaID != 0) {
                         if (megaPair.getEvolution1() == 0) {
+                            Pokemon base = new Pokemon();
+                            Pokemon source = pokes[i];
+                            copyStats(base, source);
+                            megaPair.setOriginalBaseForm(base);
                             megaPair.setEvolution1(megaID);
                         } else {
                             megaPair.setEvolution2(megaID);
@@ -3163,13 +3192,50 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         }
     }
 
+    private void adaptMega(int megaID, Pokemon pkOld, int currentPokemon) {
+        Pokemon pk = pokesInternal[pokedexToInternal[currentPokemon]];
+        Pokemon pkMega = pokesInternal[megaID];
+
+        // Derive effects of the Mega Stone
+        int hpDiff = pkMega.hp - pkOld.hp;
+        int attackDiff = pkMega.attack - pkOld.attack;
+        int defenseDiff = pkMega.defense - pkOld.defense;
+        int spatkDiff = pkMega.spatk - pkOld.spatk;
+        int spdefDiff = pkMega.spdef - pkOld.spdef;
+        int speedDiff = pkMega.speed - pkOld.speed;
+        int abilityDiff = pkMega.ability1;
+        Type secondaryTypeDiff = null;
+        if (pkMega.secondaryType != pkOld.secondaryType && pkMega.secondaryType != null) {
+            secondaryTypeDiff = pkMega.secondaryType;
+        }
+
+        // Set Mega form to base
+        copyStats(pkMega, pk);
+
+        // Apply changes
+        pkMega.hp = Math.max(1,pkMega.hp + hpDiff);
+        pkMega.attack = Math.max(1,pkMega.attack + attackDiff);
+        pkMega.defense = Math.max(1,pkMega.defense + defenseDiff);
+        pkMega.spatk = Math.max(1,pkMega.spatk + spatkDiff);
+        pkMega.spdef = Math.max(1,pkMega.spdef + spdefDiff);
+        pkMega.speed = Math.max(1,pkMega.speed + speedDiff);
+        pkMega.ability1 = abilityDiff;
+        pkMega.ability2 = abilityDiff;
+        if (secondaryTypeDiff != null) pkMega.secondaryType = secondaryTypeDiff;
+    }
+
     @Override
     public void adaptMegaEvolutions() {
-        System.out.println("Adapting Mega Evolutions...");
-
-        // TODO: implement
-
-        System.out.println("Success!");
+        int currentPokemon = 0;
+        for (MegaEvolutions megaPair : megas) {
+            if (megaPair.getEvolution1() != 0) {
+                adaptMega(megaPair.getEvolution1(), megaPair.getOriginalBaseForm(), currentPokemon);
+            }
+            if (megaPair.getEvolution2() != 0) {
+                adaptMega(megaPair.getEvolution2(), megaPair.getOriginalBaseForm(), currentPokemon);
+            }
+            currentPokemon++;
+        }
     }
 
     @Override
