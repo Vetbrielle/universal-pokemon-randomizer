@@ -74,7 +74,6 @@ import com.dabomstew.pkrandom.Randomizer;
 import com.dabomstew.pkrandom.Settings;
 import com.dabomstew.pkrandom.SysConstants;
 import com.dabomstew.pkrandom.Utils;
-import com.dabomstew.pkrandom.constants.Gen3Constants;
 import com.dabomstew.pkrandom.exceptions.InvalidSupplementFilesException;
 import com.dabomstew.pkrandom.exceptions.RandomizationException;
 import com.dabomstew.pkrandom.pokemon.GenRestrictions;
@@ -254,6 +253,10 @@ public class RandomizerGUI extends javax.swing.JFrame {
                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                 Short.MAX_VALUE)
+                        .addComponent(megaPanel,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                Short.MAX_VALUE)
                         .addComponent(tmhmsPanel,
                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                 javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -373,6 +376,13 @@ public class RandomizerGUI extends javax.swing.JFrame {
                                                 javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(
                                                 staticPokemonPanel,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(
+                                                megaPanel,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -850,10 +860,15 @@ public class RandomizerGUI extends javax.swing.JFrame {
         this.wpHeldItemsBanBadCB.setSelected(false);
         this.wpHeldItemsBanBadCB.setVisible(true);
 
-        this.stpRandomL4LRB.setEnabled(false);
-        this.stpRandomTotalRB.setEnabled(false);
         this.stpUnchangedRB.setEnabled(false);
         this.stpUnchangedRB.setSelected(true);
+        this.stpRandomL4LRB.setEnabled(false);
+        this.stpRandomTotalRB.setEnabled(false);
+
+        this.megaUnchangedRB.setEnabled(false);
+        this.megaUnchangedRB.setSelected(true);
+        this.megaApplyStoneRB.setEnabled(false);
+        this.megaRandomRB.setEnabled(false);
 
         this.tmmRandomRB.setEnabled(false);
         this.tmmUnchangedRB.setEnabled(false);
@@ -1166,7 +1181,11 @@ public class RandomizerGUI extends javax.swing.JFrame {
             if (this.romHandler.canChangeStaticPokemon()) {
                 this.stpRandomL4LRB.setEnabled(true);
                 this.stpRandomTotalRB.setEnabled(true);
-
+            } else if (this.romHandler.getROMCode().equals("GAIA")){
+                this.megaPanel.setVisible(true);
+                this.megaUnchangedRB.setEnabled(true);
+                this.megaApplyStoneRB.setEnabled(true);
+                this.megaRandomRB.setEnabled(true);
             }
 
             this.tmmRandomRB.setEnabled(true);
@@ -2564,6 +2583,7 @@ public class RandomizerGUI extends javax.swing.JFrame {
         qsOpenChooser = new javax.swing.JFileChooser();
         qsSaveChooser = new javax.swing.JFileChooser();
         staticPokemonButtonGroup = new javax.swing.ButtonGroup();
+        megaButtonGroup = new javax.swing.ButtonGroup();
         tmMovesButtonGroup = new javax.swing.ButtonGroup();
         tmHmCompatibilityButtonGroup = new javax.swing.ButtonGroup();
         pokeAbilitiesButtonGroup = new javax.swing.ButtonGroup();
@@ -2637,6 +2657,10 @@ public class RandomizerGUI extends javax.swing.JFrame {
         stpUnchangedRB = new javax.swing.JRadioButton();
         stpRandomL4LRB = new javax.swing.JRadioButton();
         stpRandomTotalRB = new javax.swing.JRadioButton();
+        megaPanel = new javax.swing.JPanel();
+        megaUnchangedRB = new javax.swing.JRadioButton();
+        megaApplyStoneRB = new javax.swing.JRadioButton();
+        megaRandomRB = new javax.swing.JRadioButton();
         inGameTradesPanel = new javax.swing.JPanel();
         igtUnchangedRB = new javax.swing.JRadioButton();
         igtGivenOnlyRB = new javax.swing.JRadioButton();
@@ -3161,11 +3185,11 @@ public class RandomizerGUI extends javax.swing.JFrame {
                 .addGroup(pokemonEvolutionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(peForceChangeCB)
                     .addComponent(peThreeStagesCB)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pokemonEvolutionsPanelLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pokemonEvolutionsPanelLayout.createSequentialGroup()
                         .addGroup(pokemonEvolutionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(peSimilarStrengthCB)
                             .addComponent(peSameTypeCB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(ComponentPlacement.UNRELATED, 200, 200)
                         .addGroup(pokemonEvolutionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(goCondenseEvosCheckBox)
                             .addComponent(goRemoveTradeEvosCheckBox))))
@@ -3202,7 +3226,10 @@ public class RandomizerGUI extends javax.swing.JFrame {
                         .addComponent(baseStatsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(abilitiesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pokemonTypesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pokeTraitsPanelLayout.createSequentialGroup()
+                        .addComponent(pokemonTypesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(megaPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(pokemonEvolutionsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -3214,8 +3241,10 @@ public class RandomizerGUI extends javax.swing.JFrame {
                     .addComponent(baseStatsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(abilitiesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(pokemonTypesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pokeTraitsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pokemonTypesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(megaPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap()
                 .addComponent(pokemonEvolutionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -3365,6 +3394,43 @@ public class RandomizerGUI extends javax.swing.JFrame {
                 .addComponent(stpRandomTotalRB))
         );
 
+        megaPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("RandomizerGUI.megaPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        megaButtonGroup.add(megaUnchangedRB);
+        megaUnchangedRB.setSelected(true);
+        megaUnchangedRB.setText(bundle.getString("RandomizerGUI.megaUnchangedRB.text")); // NOI18N
+        megaUnchangedRB.setToolTipText(bundle.getString("RandomizerGUI.megaUnchangedRB.toolTipText")); // NOI18N
+
+        megaButtonGroup.add(megaApplyStoneRB);
+        megaApplyStoneRB.setText(bundle.getString("RandomizerGUI.megaApplyStoneRB.text")); // NOI18N
+        megaApplyStoneRB.setToolTipText(bundle.getString("RandomizerGUI.megaApplyStoneRB.toolTipText")); // NOI18N
+
+        megaButtonGroup.add(megaRandomRB);
+        megaRandomRB.setText(bundle.getString("RandomizerGUI.megaRandomRB.text")); // NOI18N
+        megaRandomRB.setToolTipText(bundle.getString("RandomizerGUI.megaRandomRB.toolTipText")); // NOI18N
+
+        javax.swing.GroupLayout megaPanelLayout = new javax.swing.GroupLayout(megaPanel);
+        megaPanel.setLayout(megaPanelLayout);
+        megaPanelLayout.setHorizontalGroup(
+                megaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(megaPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(megaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(megaUnchangedRB)
+                                        .addComponent(megaApplyStoneRB)
+                                        .addComponent(megaRandomRB))
+                                .addContainerGap(407, Short.MAX_VALUE))
+        );
+        megaPanelLayout.setVerticalGroup(
+                megaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(megaPanelLayout.createSequentialGroup()
+                                .addComponent(megaUnchangedRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(megaApplyStoneRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(megaRandomRB))
+        );
+
         inGameTradesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("RandomizerGUI.inGameTradesPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         ingameTradesButtonGroup.add(igtUnchangedRB);
@@ -3467,7 +3533,6 @@ public class RandomizerGUI extends javax.swing.JFrame {
                 .addComponent(inGameTradesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
-
         randomizerOptionsPane.addTab(bundle.getString("RandomizerGUI.startersInnerPanel.TabConstraints.tabTitle"), startersInnerPanel); // NOI18N
 
         pokemonMovesetsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("RandomizerGUI.pokemonMovesetsPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
@@ -4751,6 +4816,11 @@ public class RandomizerGUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton stpRandomL4LRB;
     private javax.swing.JRadioButton stpRandomTotalRB;
     private javax.swing.JRadioButton stpUnchangedRB;
+    private javax.swing.ButtonGroup megaButtonGroup;
+    private javax.swing.JPanel megaPanel;
+    private javax.swing.JRadioButton megaApplyStoneRB;
+    private javax.swing.JRadioButton megaRandomRB;
+    private javax.swing.JRadioButton megaUnchangedRB;
     private javax.swing.JCheckBox tcnRandomizeCB;
     private javax.swing.JRadioButton thcFullRB;
     private javax.swing.JRadioButton thcRandomTotalRB;
