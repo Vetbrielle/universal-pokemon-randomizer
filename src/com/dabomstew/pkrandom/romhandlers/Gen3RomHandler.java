@@ -2287,7 +2287,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         log("Patch successful!" + nl);
     }
 
-    public String pointerToHexString(int pointer) {
+    private String pointerToHexString(int pointer) {
         String hex = String.format("%08X", pointer + 0x08000000);
         return new String(new char[] { hex.charAt(6), hex.charAt(7), hex.charAt(4), hex.charAt(5), hex.charAt(2),
                 hex.charAt(3), hex.charAt(0), hex.charAt(1) });
@@ -2320,7 +2320,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                         && (romEntry.romType == Gen3Constants.RomType_Gaia || method <= Gen3Constants.gen3EvolutionMethodCount)
                         && evolvingTo >= 1
                         && evolvingTo <= numInternalPokes) {
-                    // System.out.println(pk + "\n evolves to \n" + pokesInternal[evolvingTo] + "\n");
                     // Because of Mega Evolution, we skip checking if the method number is too large for Gaia
                     int extraInfo = readWord(currentEvoEntry + 2);
                     EvolutionType evoType = EvolutionType.fromIndex(generation, method);
@@ -2359,17 +2358,20 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
                 int evoSpecies = pokedexToInternal[evo.to.number];
                 // Special case for Mega Evolutions
-                if (pk.number == evoSpecies) {
+                if (pk.number == internalToPokedex[evoSpecies]) {
                     int megaID = 0;
                     int previousMegaID = 0;
+                    // Start counting at -1 to discount the base species
+                    int numberOfMegas = -1;
                     for (int j = 1; j < internalToPokedex.length; j++) {
-                        if (pk.number == pokedexToInternal[internalToPokedex[j]]) {
+                        if (pk.number == internalToPokedex[j]) {
                             previousMegaID = megaID;
                             megaID = j;
+                            numberOfMegas++;
                         }
                     }
                     // Extra-special case for Pokémon with 2 Megas
-                    if (previousMegaID != pk.number && evosWritten == 0) {
+                    if (numberOfMegas > 1 && evosWritten == 0) {
                         megaID = previousMegaID;
                     }
                     evoSpecies = megaID;
