@@ -48,7 +48,7 @@ public class Settings {
 
     public static final int VERSION = 172;
 
-    public static final int LENGTH_OF_SETTINGS_DATA = 36;
+    public static final int LENGTH_OF_SETTINGS_DATA = 37;
 
     private CustomNamesSet customNames;
 
@@ -220,10 +220,17 @@ public class Settings {
     private FieldItemsMod fieldItemsMod = FieldItemsMod.UNCHANGED;
     private boolean banBadRandomFieldItems;
 
+    public enum MegaMod {
+        UNCHANGED, MEGA_STONE, RANDOM
+    }
+
+    private MegaMod megaMod = MegaMod.UNCHANGED;
+
     // to and from strings etc
     public void write(FileOutputStream out) throws IOException {
         out.write(VERSION);
         byte[] settings = toString().getBytes("UTF-8");
+
         out.write(settings.length);
         out.write(settings);
     }
@@ -383,6 +390,11 @@ public class Settings {
 
         // @ 35 trainer pokemon level modifier
         out.write((trainersLevelModified ? 0x80 : 0) | (trainersLevelModifier+50));
+
+        // @ 36 mega evolutions
+        out.write(makeByteSelected(megaMod == MegaMod.RANDOM, megaMod == MegaMod.MEGA_STONE,
+                megaMod == MegaMod.UNCHANGED));
+
 
         try {
             byte[] romName = this.romName.getBytes("US-ASCII");
@@ -580,6 +592,10 @@ public class Settings {
         settings.setTrainersLevelModified(restoreState(data[35], 7));
         settings.setTrainersLevelModifier((data[35] & 0x7F) - 50);
 
+        settings.setMegaMod(restoreEnum(MegaMod.class, data[36], 2, // UNCHANGED
+                1, // APPLY MEGA STONE
+                0 // RANDOM
+        ));
         int romNameLength = data[LENGTH_OF_SETTINGS_DATA] & 0xFF;
         String romName = new String(data, LENGTH_OF_SETTINGS_DATA + 1, romNameLength, "US-ASCII");
         settings.setRomName(romName);
@@ -1496,7 +1512,6 @@ public class Settings {
         this.fieldItemsMod = fieldItemsMod;
         return this;
     }
-
     public Settings setFieldItemsMod(boolean... bools) {
         return setFieldItemsMod(getEnum(FieldItemsMod.class, bools));
     }
@@ -1509,6 +1524,20 @@ public class Settings {
         this.banBadRandomFieldItems = banBadRandomFieldItems;
         return this;
     }
+
+    public MegaMod getMegaMod() {
+        return megaMod;
+    }
+
+    public Settings setMegaMod(MegaMod megaMod) {
+        this.megaMod = megaMod;
+        return this;
+    }
+
+    public Settings setMegaMod(boolean... bools) {
+        return setMegaMod(getEnum(MegaMod.class, bools));
+    }
+
 
     private static int makeByteSelected(boolean... bools) {
         if (bools.length > 8) {

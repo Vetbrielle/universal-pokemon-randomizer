@@ -1646,6 +1646,7 @@ public class RandomizerGUI extends javax.swing.JFrame {
 
         int nameLength = data[Settings.LENGTH_OF_SETTINGS_DATA] & 0xFF;
         if (data.length != Settings.LENGTH_OF_SETTINGS_DATA + 9 + nameLength) {
+            System.out.println("reached");
             return null; // not valid length
         }
         String name = new String(data, Settings.LENGTH_OF_SETTINGS_DATA + 1, nameLength, "US-ASCII");
@@ -1797,6 +1798,10 @@ public class RandomizerGUI extends javax.swing.JFrame {
         this.fiUnchangedRB.setSelected(settings.getFieldItemsMod() == Settings.FieldItemsMod.UNCHANGED);
         this.fiBanBadCB.setSelected(settings.isBanBadRandomFieldItems());
 
+        this.megaRandomRB.setSelected(settings.getMegaMod() == Settings.MegaMod.RANDOM);
+        this.megaApplyStoneRB.setSelected(settings.getMegaMod() == Settings.MegaMod.MEGA_STONE);
+        this.megaUnchangedRB.setSelected(settings.getMegaMod() == Settings.MegaMod.UNCHANGED);
+
         this.currentRestrictions = settings.getCurrentRestrictions();
         if (this.currentRestrictions != null) {
             this.currentRestrictions.limitToGen(this.romHandler.generationOfPokemon());
@@ -1923,6 +1928,8 @@ public class RandomizerGUI extends javax.swing.JFrame {
 
         settings.setFieldItemsMod(fiUnchangedRB.isSelected(), fiShuffleRB.isSelected(), fiRandomRB.isSelected());
         settings.setBanBadRandomFieldItems(fiBanBadCB.isSelected());
+
+        settings.setMegaMod(megaUnchangedRB.isSelected(),megaApplyStoneRB.isSelected(),megaRandomRB.isSelected());
 
         settings.setCurrentRestrictions(currentRestrictions);
 

@@ -123,7 +123,7 @@ public class PresetLoadDialog extends javax.swing.JDialog {
             invalidValues();
             return false;
         }
-        
+
         // 161 onwards: look for version number
         String configString = this.configStringField.getText();
         if (configString.length() < 3) {

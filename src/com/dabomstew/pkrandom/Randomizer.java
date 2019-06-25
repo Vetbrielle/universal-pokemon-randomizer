@@ -512,6 +512,13 @@ public class Randomizer {
             romHandler.randomizeFieldItems(settings.isBanBadRandomFieldItems());
         }
 
+        // Mega Evolutions
+        if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
+            // romHandler.adaptMegaEvolutions();
+        } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
+            // romHandler.randomizeMegaEvolutions();
+        }
+
         // Signature...
         romHandler.applySignature();
 

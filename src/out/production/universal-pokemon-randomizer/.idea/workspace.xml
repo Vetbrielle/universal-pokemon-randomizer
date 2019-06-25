@@ -124,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
-              <caret line="3191" column="69" selection-start-line="3191" selection-start-column="69" selection-end-line="3191" selection-end-column="69" />
+              <caret line="3191" column="77" selection-start-line="3191" selection-start-column="77" selection-end-line="3191" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -142,9 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sett</find>
-      <find>settings</find>
-      <find>setti</find>
       <find>randomizeEvolutions</find>
       <find>evo</find>
       <find>populate</find>
@@ -172,6 +169,9 @@
       <find>MegaPanel</find>
       <find>evolutions</find>
       <find>Takes effect</find>
+      <find>updateMoves</find>
+      <find>goUpdateMovesCheckBox</find>
+      <find>impossible</find>
     </findStrings>
     <replaceStrings>
       <replace>allowedItems</replace>
@@ -317,12 +317,12 @@
       <workItem from="1560552779919" duration="14000" />
       <workItem from="1561196821275" duration="5338000" />
       <workItem from="1561457848162" duration="12459000" />
-      <workItem from="1561470643047" duration="998000" />
+      <workItem from="1561470643047" duration="1130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86888000" />
+    <option name="totallyTimeSpent" value="87020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -337,7 +337,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15926327" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15926327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -656,7 +656,7 @@
     <entry file="file://$PROJECT_DIR$/com/dabomstew/pkrandom/gui/RandomizerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
-          <caret line="3191" column="69" selection-start-line="3191" selection-start-column="69" selection-end-line="3191" selection-end-column="69" />
+          <caret line="3191" column="77" selection-start-line="3191" selection-start-column="77" selection-end-line="3191" selection-end-column="77" />
         </state>
       </provider>
     </entry>
