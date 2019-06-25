@@ -514,9 +514,9 @@ public class Randomizer {
 
         // Mega Evolutions
         if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
-            // romHandler.adaptMegaEvolutions();
+            romHandler.adaptMegaEvolutions();
         } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
-            // romHandler.randomizeMegaEvolutions();
+            romHandler.randomizeMegaEvolutions();
         }
 
         // Signature...

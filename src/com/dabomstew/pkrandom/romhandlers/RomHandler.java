@@ -413,6 +413,16 @@ public interface RomHandler {
     // (excluding Gameshark codes or early drink in RBY)
     public List<Integer> getEarlyRequiredHMMoves();
 
+    // Mega Evolutions
+
+    // TMs on the field
+
+    // Randomizer methods
+
+    public void adaptMegaEvolutions();
+
+    public void randomizeMegaEvolutions();
+
     // Misc
 
     public boolean isYellow();

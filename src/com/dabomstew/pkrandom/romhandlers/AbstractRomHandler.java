@@ -3676,6 +3676,12 @@ public abstract class AbstractRomHandler implements RomHandler {
     }
 
     @Override
+    public void adaptMegaEvolutions() { return; }
+
+    @Override
+    public void randomizeMegaEvolutions() { return; }
+
+    @Override
     public boolean hasTimeBasedEncounters() {
         // DEFAULT: no
         return false;

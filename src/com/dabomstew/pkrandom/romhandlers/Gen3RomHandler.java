@@ -3108,6 +3108,24 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     }
 
     @Override
+    public void adaptMegaEvolutions() {
+        System.out.println("Adapting Mega Evolutions...");
+
+        // TODO: implement
+
+        System.out.println("Success!");
+    }
+
+    @Override
+    public void randomizeMegaEvolutions() {
+        System.out.println("Randomizing Mega Evolutions...");
+
+        // TODO: implement
+
+        System.out.println("Success!");
+    }
+
+    @Override
     public int miscTweaksAvailable() {
         int available = 0;
         if (romEntry.romType != Gen3Constants.RomType_Gaia) {
