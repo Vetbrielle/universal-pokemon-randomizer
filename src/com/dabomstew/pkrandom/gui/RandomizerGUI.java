@@ -3431,6 +3431,7 @@ public class RandomizerGUI extends javax.swing.JFrame {
         megaPanelLayout.setVerticalGroup(
                 megaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(megaPanelLayout.createSequentialGroup()
+                                .addContainerGap()
                                 .addComponent(megaUnchangedRB)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(megaApplyStoneRB)
