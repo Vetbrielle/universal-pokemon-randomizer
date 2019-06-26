@@ -25,18 +25,7 @@ package com.dabomstew.pkrandom.romhandlers;
 
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.zip.CRC32;
 
 import com.dabomstew.pkrandom.FileFunctions;
@@ -350,7 +339,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private String[] pokeNames;
     private ItemList allowedItems, nonBadItems;
     private int evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
-    private List<MegaEvolutions> megas = new ArrayList<>();
+    public List<MegaEvolutions> megas = new ArrayList<>();
 
     @Override
     public boolean detectRom(byte[] rom) {
@@ -2414,6 +2403,17 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
                 evosWritten++;
             }
         }
+
+
+        // Write changed Mega Evolutions
+        if (generation == 6) {
+            for (int i = 856; i <= 903; i++) {
+                if (i != 899) {
+                    int evoOffset = baseOffset + i * evolutionsPerPokemon * Gen3Constants.evolutionEntrySize;
+                    writeWord(evoOffset + 4, pokedexToInternal[pokesInternal[i].evolutionsTo.get(0).to.number]);
+                }
+            }
+        }
     }
 
     @Override
@@ -3240,11 +3240,30 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
 
     @Override
     public void randomizeMegaEvolutions() {
-        System.out.println("Randomizing Mega Evolutions...");
+        List<Integer> evolvers = new ArrayList<>();
+        List<Integer> forms = new ArrayList<>();
+        for (MegaEvolutions megaPair : megas) {
+            if (megaPair.getEvolution1() != 0) {
+                evolvers.add(megaPair.getOriginalBaseForm().number);
+                forms.add(megaPair.getEvolution1());
+                if (megaPair.getEvolution2() != 0) forms.add(megaPair.getEvolution2());
+            }
+        }
 
-        // TODO: implement
+        Collections.shuffle(forms);
+        for (int basePokemon : evolvers) {
+            int i = forms.get(0);
+            forms.remove(0);
+            megas.get(basePokemon).setEvolution1(i);
+            pokesInternal[i].evolutionsTo.get(0).to = pokes[megas.get(basePokemon).getOriginalBaseForm().number];
 
-        System.out.println("Success!");
+            if (megas.get(basePokemon).getEvolution2() != 0) {
+                i = forms.get(1);
+                forms.remove(1);
+                megas.get(basePokemon).setEvolution2(i);
+                pokesInternal[i].evolutionsTo.get(0).to = pokes[megas.get(basePokemon).getOriginalBaseForm().number];
+            }
+        }
     }
 
     @Override
