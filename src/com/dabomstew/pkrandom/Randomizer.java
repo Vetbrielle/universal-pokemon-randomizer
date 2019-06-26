@@ -248,11 +248,11 @@ public class Randomizer {
 
         // Show the new movesets if applicable
         if (settings.getMovesetsMod() == Settings.MovesetsMod.UNCHANGED) {
-            log.println("Pokemon Movesets: Unchanged." + NEWLINE);
+            log.println("Pokémon Movesets: Unchanged." + NEWLINE);
         } else if (settings.getMovesetsMod() == Settings.MovesetsMod.METRONOME_ONLY) {
-            log.println("Pokemon Movesets: Metronome Only." + NEWLINE);
+            log.println("Pokémon Movesets: Metronome Only." + NEWLINE);
         } else {
-            log.println("--Pokemon Movesets--");
+            log.println("--Pokémon Movesets--");
             List<String> movesets = new ArrayList<String>();
             Map<Pokemon, List<MoveLearnt>> moveData = romHandler.getMovesLearnt();
             for (Pokemon pkmn : moveData.keySet()) {
@@ -512,11 +512,13 @@ public class Randomizer {
             Pokemon[] internalPokemon = romHandler.getInternalPokemon();
             List<MegaEvolutions> allMegas = romHandler.getMegas();
 
-            log.println("--Mega Evolutions--");
-            if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
+            if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE && !(settings.getBaseStatisticsMod() == Settings.BaseStatisticsMod.UNCHANGED
+                    && settings.getTypesMod() == Settings.TypesMod.UNCHANGED
+                    && settings.getAbilitiesMod() == Settings.AbilitiesMod.UNCHANGED)) {
                 romHandler.adaptMegaEvolutions();
                 maybeLogBaseStatAndTypeChanges(log, romHandler, true);
             } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
+                log.println("--Shuffled Mega Evolutions--");
                 romHandler.randomizeMegaEvolutions();
                 for (Pokemon pk : allPokes) {
                     if (pk != null) {
@@ -525,16 +527,16 @@ public class Randomizer {
                             if (evo.type == EvolutionType.MEGA_EVOLVE) {
                                 currentMegaEvolution++;
                                 Pokemon pkMega = internalPokemon[allMegas.get(pk.number).getEvolution1()];
-                                if (currentMegaEvolution == 2) pkMega = internalPokemon[allMegas.get(pk.number).getEvolution2()];
+                                if (currentMegaEvolution == 2)
+                                    pkMega = internalPokemon[allMegas.get(pk.number).getEvolution2()];
                                 log.println("When holding " + itemNames[evo.extraInfo] + ", " + pk.name + " will now Mega Evolve into Mega " + pkMega.name + xOrYMega(pkMega) + ".");
                             }
                         }
                     }
                 }
+            } else {
+                log.println("Mega Evolutions: Unchanged." + NEWLINE);
             }
-            log.println();
-        } else {
-            log.println("Mega Evolutions: Unchanged." + NEWLINE);
         }
 
         // Signature...
@@ -585,9 +587,10 @@ public class Randomizer {
                 && settings.getAbilitiesMod() == Settings.AbilitiesMod.UNCHANGED
                 && !settings.isRandomizeWildPokemonHeldItems()
                 && !isMegas) {
-            log.println("Pokemon base stats & type: unchanged" + NEWLINE);
+            log.println("Pokémon base stats & type: unchanged" + NEWLINE);
         } else {
-            if (!isMegas) log.println("--Pokemon Base Stats & Types--");
+            if (!isMegas) log.println("--Pokémon Base Stats & Types--");
+            else log.println("--Mega Evolutions Base Stats & Types--");
             if (romHandler instanceof Gen1RomHandler) {
                 log.println("NUM|NAME      |TYPE             |  HP| ATK| DEF| SPE|SPEC");
                 for (Pokemon pkmn : allPokes) {
@@ -739,9 +742,9 @@ public class Randomizer {
 
     private void maybeLogWildPokemonChanges(final PrintStream log, final RomHandler romHandler) {
         if (settings.getWildPokemonMod() == Settings.WildPokemonMod.UNCHANGED) {
-            log.println("Wild Pokemon: Unchanged." + NEWLINE);
+            log.println("Wild Pokémon: Unchanged." + NEWLINE);
         } else {
-            log.println("--Wild Pokemon--");
+            log.println("--Wild Pokémon--");
             List<EncounterSet> encounters = romHandler.getEncounters(settings.isUseTimeBasedEncounters());
             int idx = 0;
             for (EncounterSet es : encounters) {
@@ -775,7 +778,7 @@ public class Randomizer {
         if (settings.getTrainersMod() == Settings.TrainersMod.UNCHANGED && !settings.isRivalCarriesStarterThroughout()) {
             log.println("Trainers: Unchanged." + NEWLINE);
         } else {
-            log.println("--Trainers Pokemon--");
+            log.println("--Trainers Pokémon--");
             List<Trainer> trainers = romHandler.getTrainers();
             int idx = 0;
             for (Trainer t : trainers) {
@@ -815,9 +818,9 @@ public class Randomizer {
             }
             List<Pokemon> newStatics = romHandler.getStaticPokemon();
             if (settings.getStaticPokemonMod() == Settings.StaticPokemonMod.UNCHANGED) {
-                log.println("Static Pokemon: Unchanged." + NEWLINE);
+                log.println("Static Pokémon: Unchanged." + NEWLINE);
             } else {
-                log.println("--Static Pokemon--");
+                log.println("--Static Pokémon--");
                 Map<Pokemon, Integer> seenPokemon = new TreeMap<Pokemon, Integer>();
                 for (int i = 0; i < oldStatics.size(); i++) {
                     Pokemon oldP = oldStatics.get(i);
