@@ -49,21 +49,7 @@ import com.dabomstew.pkrandom.MiscTweak;
 import com.dabomstew.pkrandom.RomFunctions;
 import com.dabomstew.pkrandom.constants.GlobalConstants;
 import com.dabomstew.pkrandom.exceptions.RandomizationException;
-import com.dabomstew.pkrandom.pokemon.Encounter;
-import com.dabomstew.pkrandom.pokemon.EncounterSet;
-import com.dabomstew.pkrandom.pokemon.Evolution;
-import com.dabomstew.pkrandom.pokemon.EvolutionType;
-import com.dabomstew.pkrandom.pokemon.ExpCurve;
-import com.dabomstew.pkrandom.pokemon.GenRestrictions;
-import com.dabomstew.pkrandom.pokemon.IngameTrade;
-import com.dabomstew.pkrandom.pokemon.ItemList;
-import com.dabomstew.pkrandom.pokemon.Move;
-import com.dabomstew.pkrandom.pokemon.MoveCategory;
-import com.dabomstew.pkrandom.pokemon.MoveLearnt;
-import com.dabomstew.pkrandom.pokemon.Pokemon;
-import com.dabomstew.pkrandom.pokemon.Trainer;
-import com.dabomstew.pkrandom.pokemon.TrainerPokemon;
-import com.dabomstew.pkrandom.pokemon.Type;
+import com.dabomstew.pkrandom.pokemon.*;
 
 public abstract class AbstractRomHandler implements RomHandler {
 
@@ -3680,6 +3666,12 @@ public abstract class AbstractRomHandler implements RomHandler {
 
     @Override
     public void randomizeMegaEvolutions() { return; }
+
+    @Override
+    public Pokemon[] getInternalPokemon() { return null; }
+
+    @Override
+    public List<MegaEvolutions> getMegas() { return null; }
 
     @Override
     public boolean hasTimeBasedEncounters() {

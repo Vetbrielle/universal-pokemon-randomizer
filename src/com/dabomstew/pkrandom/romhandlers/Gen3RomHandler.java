@@ -117,31 +117,6 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         private boolean isMoveTutor;
     }
 
-    private static class MegaEvolutions {
-        private Pokemon originalBaseForm;
-        private int evolution1;
-        private int evolution2;
-        MegaEvolutions(int evolution1, int evolution2) {this.evolution1=evolution1;this.evolution2=evolution2;}
-        public void setEvolution1 (int e1) {
-            this.evolution1 = e1;
-        }
-        public int getEvolution1 () {
-            return this.evolution1;
-        }
-        public void setEvolution2 (int e2) {
-            this.evolution2 = e2;
-        }
-        public int getEvolution2 () {
-            return this.evolution2;
-        }
-        public void setOriginalBaseForm (Pokemon pk) {
-            this.originalBaseForm = pk;
-        }
-        public Pokemon getOriginalBaseForm () {
-            return this.originalBaseForm;
-        }
-    }
-
     private static List<RomEntry> roms;
 
     static {
@@ -340,6 +315,16 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
     private ItemList allowedItems, nonBadItems;
     private int evolutionsPerPokemon = Gen3Constants.gaiaEvolutionsPerPokemon;
     public List<MegaEvolutions> megas = new ArrayList<>();
+
+    @Override
+    public List<MegaEvolutions> getMegas() {
+        return megas;
+    }
+
+    @Override
+    public Pokemon[] getInternalPokemon() {
+        return pokesInternal;
+    }
 
     @Override
     public boolean detectRom(byte[] rom) {
@@ -3131,8 +3116,7 @@ public class Gen3RomHandler extends AbstractGBRomHandler {
         destination.name = source.name;
         destination.number = source.number;
         destination.primaryType = source.primaryType;
-        destination.secondaryType = (source.secondaryType != null) ? source.secondaryType : source.primaryType;
-        destination.secondaryType = (destination.primaryType == destination.secondaryType) ? null : destination.secondaryType;
+        destination.secondaryType = source.secondaryType;
         destination.hp = source.hp;
         destination.attack = source.attack;
         destination.defense = source.defense;

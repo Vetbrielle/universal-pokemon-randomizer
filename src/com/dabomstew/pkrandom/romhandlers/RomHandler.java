@@ -32,15 +32,7 @@ import java.util.Random;
 
 import com.dabomstew.pkrandom.CustomNamesSet;
 import com.dabomstew.pkrandom.MiscTweak;
-import com.dabomstew.pkrandom.pokemon.EncounterSet;
-import com.dabomstew.pkrandom.pokemon.GenRestrictions;
-import com.dabomstew.pkrandom.pokemon.IngameTrade;
-import com.dabomstew.pkrandom.pokemon.ItemList;
-import com.dabomstew.pkrandom.pokemon.Move;
-import com.dabomstew.pkrandom.pokemon.MoveLearnt;
-import com.dabomstew.pkrandom.pokemon.Pokemon;
-import com.dabomstew.pkrandom.pokemon.Trainer;
-import com.dabomstew.pkrandom.pokemon.Type;
+import com.dabomstew.pkrandom.pokemon.*;
 
 public interface RomHandler {
 
@@ -415,13 +407,12 @@ public interface RomHandler {
 
     // Mega Evolutions
 
-    // TMs on the field
-
-    // Randomizer methods
-
     public void adaptMegaEvolutions();
 
     public void randomizeMegaEvolutions();
+
+    public Pokemon[] getInternalPokemon();
+    public List<MegaEvolutions> getMegas();
 
     // Misc
 

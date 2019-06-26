@@ -33,14 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import com.dabomstew.pkrandom.pokemon.Encounter;
-import com.dabomstew.pkrandom.pokemon.EncounterSet;
-import com.dabomstew.pkrandom.pokemon.IngameTrade;
-import com.dabomstew.pkrandom.pokemon.Move;
-import com.dabomstew.pkrandom.pokemon.MoveLearnt;
-import com.dabomstew.pkrandom.pokemon.Pokemon;
-import com.dabomstew.pkrandom.pokemon.Trainer;
-import com.dabomstew.pkrandom.pokemon.TrainerPokemon;
+import com.dabomstew.pkrandom.pokemon.*;
 import com.dabomstew.pkrandom.romhandlers.Gen1RomHandler;
 import com.dabomstew.pkrandom.romhandlers.Gen5RomHandler;
 import com.dabomstew.pkrandom.romhandlers.RomHandler;
@@ -184,7 +177,7 @@ public class Randomizer {
             romHandler.randomizeWildHeldItems(settings.isBanBadRandomWildPokemonHeldItems());
         }
 
-        maybeLogBaseStatAndTypeChanges(log, romHandler);
+        maybeLogBaseStatAndTypeChanges(log, romHandler, false);
         for (Pokemon pkmn : romHandler.getPokemon()) {
             if (pkmn != null) {
                 checkValue = addToCV(checkValue, pkmn.hp, pkmn.attack, pkmn.defense, pkmn.speed, pkmn.spatk,
@@ -514,13 +507,34 @@ public class Randomizer {
 
         // Mega Evolutions
         if (settings.getMegaMod() != Settings.MegaMod.UNCHANGED) {
+            String[] itemNames = romHandler.getItemNames();
+            List<Pokemon> allPokes = romHandler.getPokemon();
+            Pokemon[] internalPokemon = romHandler.getInternalPokemon();
+            List<MegaEvolutions> allMegas = romHandler.getMegas();
+
+            log.println("--Mega Evolutions--");
             if (settings.getMegaMod() == Settings.MegaMod.MEGA_STONE) {
                 romHandler.adaptMegaEvolutions();
+                maybeLogBaseStatAndTypeChanges(log, romHandler, true);
             } else if (settings.getMegaMod() == Settings.MegaMod.RANDOM) {
                 romHandler.randomizeMegaEvolutions();
+                for (Pokemon pk : allPokes) {
+                    if (pk != null) {
+                        int currentMegaEvolution = 0;
+                        for (Evolution evo : pk.evolutionsFrom) {
+                            if (evo.type == EvolutionType.MEGA_EVOLVE) {
+                                currentMegaEvolution++;
+                                Pokemon pkMega = internalPokemon[allMegas.get(pk.number).getEvolution1()];
+                                if (currentMegaEvolution == 2) pkMega = internalPokemon[allMegas.get(pk.number).getEvolution2()];
+                                log.println("When holding " + itemNames[evo.extraInfo] + ", " + pk.name + " will now Mega Evolve into Mega " + pkMega.name + xOrYMega(pkMega) + ".");
+                            }
+                        }
+                    }
+                }
             }
-            log.println("--Mega Evolutions--");
-
+            log.println();
+        } else {
+            log.println("Mega Evolutions: Unchanged." + NEWLINE);
         }
 
         // Signature...
@@ -542,17 +556,38 @@ public class Randomizer {
         return checkValue;
     }
 
-    private void maybeLogBaseStatAndTypeChanges(final PrintStream log, final RomHandler romHandler) {
+    private String xOrYMega(Pokemon pk) {
+        // Please forgive me for hardcoding this but I don't feel like doing it the "right" way
+        if (pk.name.equals("Mewtwo") && pk.secondaryType == Type.FIGHTING || pk.name.equals("Charizard") && pk.secondaryType == Type.DRAGON) return " X";
+        else if (pk.name.equals("Mewtwo") || pk.name.equals("Charizard")) return " Y";
+
+        return "";
+    }
+
+    private void maybeLogBaseStatAndTypeChanges(final PrintStream log, final RomHandler romHandler, final boolean isMegas) {
         List<Pokemon> allPokes = romHandler.getPokemon();
+        Pokemon[] internalPokes = romHandler.getInternalPokemon();
+        List<MegaEvolutions> allMegas = romHandler.getMegas();
+
+        List<Pokemon> megaPokes = null;
+        if (allMegas != null) {
+            megaPokes = new ArrayList<>();
+            for (MegaEvolutions megaPair : allMegas) {
+                megaPokes.add(internalPokes[megaPair.getEvolution1()]);
+                if (megaPair.getEvolution2() != 0) megaPokes.add(internalPokes[megaPair.getEvolution2()]);
+            }
+        }
+
         String[] itemNames = romHandler.getItemNames();
         // Log base stats & types if changed at all
         if (settings.getBaseStatisticsMod() == Settings.BaseStatisticsMod.UNCHANGED
                 && settings.getTypesMod() == Settings.TypesMod.UNCHANGED
                 && settings.getAbilitiesMod() == Settings.AbilitiesMod.UNCHANGED
-                && !settings.isRandomizeWildPokemonHeldItems()) {
+                && !settings.isRandomizeWildPokemonHeldItems()
+                && !isMegas) {
             log.println("Pokemon base stats & type: unchanged" + NEWLINE);
         } else {
-            log.println("--Pokemon Base Stats & Types--");
+            if (!isMegas) log.println("--Pokemon Base Stats & Types--");
             if (romHandler instanceof Gen1RomHandler) {
                 log.println("NUM|NAME      |TYPE             |  HP| ATK| DEF| SPE|SPEC");
                 for (Pokemon pkmn : allPokes) {
@@ -567,50 +602,68 @@ public class Randomizer {
 
                 }
             } else {
-                log.print("NUM|NAME      |TYPE             |  HP| ATK| DEF| SPE|SATK|SDEF");
+                if (isMegas) log.print("NAME             |");
+                else log.print("NUM|NAME        |");
+                log.print("TYPE             |  HP| ATK| DEF| SPE|SATK|SDEF");
                 int abils = romHandler.abilitiesPerPokemon();
-                for (int i = 0; i < abils; i++) {
-                    log.print("|ABILITY" + (i + 1) + "    ");
+                if (!isMegas) {
+                    for (int i = 0; i < abils; i++) {
+                        log.print("|ABILITY" + (i + 1) + "    ");
+                    }
+                } else {
+                    abils = 1;
+                    log.print("|ABILITY " + "    ");
                 }
-                log.print("|ITEM");
+                if (!isMegas) log.print("|ITEM");
                 log.println();
-                for (Pokemon pkmn : allPokes) {
+                List<Pokemon> fullSet = allPokes;
+                if (isMegas && megaPokes != null) fullSet = megaPokes;
+                for (Pokemon pkmn : fullSet) {
                     if (pkmn != null) {
                         String typeString = pkmn.primaryType == null ? "???" : pkmn.primaryType.toString();
                         if (pkmn.secondaryType != null) {
                             typeString += "/" + pkmn.secondaryType.toString();
                         }
-                        log.printf("%3d|%-10s|%-17s|%4d|%4d|%4d|%4d|%4d|%4d", pkmn.number, pkmn.name, typeString,
+                        if (!isMegas) log.printf("%3d|", pkmn.number);
+                        else log.print("Mega ");
+                        String nameString = pkmn.name;
+                        if (isMegas) {
+                            nameString += xOrYMega(pkmn);
+                        }
+                        log.printf("%-12s|%-17s|%4d|%4d|%4d|%4d|%4d|%4d", nameString, typeString,
                                 pkmn.hp, pkmn.attack, pkmn.defense, pkmn.speed, pkmn.spatk, pkmn.spdef);
-                        if (abils > 0) {
+                        if (abils == 1) {
+                            log.printf("|%-12s", romHandler.abilityName(pkmn.ability1));
+                        } else if (abils == 2) {
                             log.printf("|%-12s|%-12s", romHandler.abilityName(pkmn.ability1),
                                     romHandler.abilityName(pkmn.ability2));
-                            if (abils > 2) {
-                                log.printf("|%-12s", romHandler.abilityName(pkmn.ability3));
-                            }
+                        } else if (abils > 2) {
+                            log.printf("|%-12s", romHandler.abilityName(pkmn.ability3));
                         }
-                        log.print("|");
-                        if (pkmn.guaranteedHeldItem > 0) {
-                            log.print(itemNames[pkmn.guaranteedHeldItem] + " (100%)");
-                        } else {
-                            int itemCount = 0;
-                            if (pkmn.commonHeldItem > 0) {
-                                itemCount++;
-                                log.print(itemNames[pkmn.commonHeldItem] + " (common)");
-                            }
-                            if (pkmn.rareHeldItem > 0) {
-                                if (itemCount > 0) {
-                                    log.print(", ");
+                        if (!isMegas) {
+                            log.print("|");
+                            if (pkmn.guaranteedHeldItem > 0) {
+                                log.print(itemNames[pkmn.guaranteedHeldItem] + " (100%)");
+                            } else {
+                                int itemCount = 0;
+                                if (pkmn.commonHeldItem > 0) {
+                                    itemCount++;
+                                    log.print(itemNames[pkmn.commonHeldItem] + " (common)");
                                 }
-                                itemCount++;
-                                log.print(itemNames[pkmn.rareHeldItem] + " (rare)");
-                            }
-                            if (pkmn.darkGrassHeldItem > 0) {
-                                if (itemCount > 0) {
-                                    log.print(", ");
+                                if (pkmn.rareHeldItem > 0) {
+                                    if (itemCount > 0) {
+                                        log.print(", ");
+                                    }
+                                    itemCount++;
+                                    log.print(itemNames[pkmn.rareHeldItem] + " (rare)");
                                 }
-                                itemCount++;
-                                log.print(itemNames[pkmn.darkGrassHeldItem] + " (dark grass only)");
+                                if (pkmn.darkGrassHeldItem > 0) {
+                                    if (itemCount > 0) {
+                                        log.print(", ");
+                                    }
+                                    itemCount++;
+                                    log.print(itemNames[pkmn.darkGrassHeldItem] + " (dark grass only)");
+                                }
                             }
                         }
                         log.println();
